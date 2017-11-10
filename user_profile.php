@@ -18,7 +18,12 @@
 ?>
 
     <div class="main">
-        
+<?php
+    if(isset($_SESSION["user"])){
+      echo "<h1 class='text-center'>" . 
+            "Welcome ".$_SESSION["user"]["firstname"]." to you profile"."</h1>";
+}?>
+   <a href="create_post.php">Create post</a>
     </div>
     
 <?php 

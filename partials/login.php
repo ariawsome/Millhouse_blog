@@ -4,11 +4,11 @@ session_start();
 require 'database.php';
 
 $password = $_POST["password"];
-$username = $_POST["username"];
+$email = $_POST["email"];
 
-$statement = $pdo->prepare("SELECT * FROM users WHERE username = :username");
+$statement = $pdo->prepare("SELECT * FROM users WHERE email = :email");
 $statement->execute(array(
-  ":username" => $username
+  ":email" => $email
 ));
 
 $fetched_user = $statement->fetch(PDO::FETCH_ASSOC);
@@ -23,6 +23,6 @@ if( password_verify($password, $fetched_user["password"]) ){
 
 } else {
 
-  header("Location: /prodjektarbete/index.php?error=Wrong username&success=false");
+  header("Location: /prodjektarbete/index.php?error=Wrong username or password&success=false");
   
 }
