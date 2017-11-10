@@ -26,10 +26,10 @@
     </div>
     <div class="main">
         <h4>Register</h4>
-      <form action="partials/register.php" method="POST">
+      <form action="partials/register.php" method="POST" class="registerform">
       
-           <label for="forname"> Forname: </label>
-          <input type="text" name="forname" required>
+           <label for="firstname"> Firstname: </label>
+          <input type="text" name="firstname" required>
           <br>
           <label for="lastname"> Lastname </label>
           <input type="text" name="lastname" required>

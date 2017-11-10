@@ -1,7 +1,7 @@
 <?php
     require 'database.php';
 
-    $forname = $_POST['forname'];
+    $firstname = $_POST['firstname'];
     $lastname = $_POST['lastname'];
     $email = $_POST['email'];
     $password = password_hash($_POST["password"], PASSWORD_DEFAULT);
@@ -12,7 +12,7 @@
       VALUES (:firstname, :lastname, :email, :username, :password)");
 
     $statement->execute(array(
-      ":firstname" => $forname,
+      ":firstname" => $firstname,
       ":lastname" => $lastname,
       ":email" => $email,
       ":username" => $username,
