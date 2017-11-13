@@ -8,20 +8,26 @@
 </head>
 <body>
     <div class="container">
-    <div class="jumbotron">     
+    <div class="jumbotron">   
+        <div class="logo"> <img src="image/jumbotron/millhouse-logo.svg">
+        </div>
     </div>
     <div class="nav">
-    <a href="index.php">Home </a><a href="about.php"> About</a>
+    <div class="home-about">
+        <a href="index.php">Home </a><a href="about.php"> About</a>
+    </div>
+    <div class="categories">
+    <h3>CATEGORIES</h3>
     
-    <h3>categories</h3>
-     <form action="index.php" method="POST">
-       <button type="submit" name="watches" class="btn btn-default">Watches</button>
-      
-       <button type="submit" name="Sunglasses" class="btn btn-default">Sunglasses</button>
-       
-       <button type="submit" name="interior" class="btn btn-default">Interior</button>
-        
-    </form>
+         <form action="index.php" method="POST">
+             <button type="submit" name="Watches" class="btn btn-default">Watches</button><p></p>
+
+           <button type="submit" name="Sunglasses" class="btn btn-default">Sunglasses</button><p></p>
+
+           <button type="submit" name="Interior" class="btn btn-default">Interior</button>
+
+        </form>
+    </div>
      
       <form action="partials/login.php" method="POST">
        
