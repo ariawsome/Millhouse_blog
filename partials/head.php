@@ -12,10 +12,19 @@
     </div>
     <div class="nav">
     <a href="index.php">Home </a><a href="about.php"> About</a>
-    <h4>Login</h4>
+    
       <form action="partials/login.php" method="POST">
-        
-
+       
+        <?php if(isset($_SESSION["user"])){ ?>
+            <a href="user_profile.php">My profile</a>
+            <br>
+            <a href="create_post.php">Create post</a>
+            <br>
+            <a href="partials/logout.php">logout</a>
+            <?php } 
+            
+         else{ ?>
+         <h4>Login</h4>
           <label for="email"> Email </label>
 
           <input type="text" name="email" class="form-control">
@@ -23,15 +32,12 @@
           <label for="password"> Password </label>
 
           <input type="password" name="password" class="form-control">
-
+          <br>
           <input type="submit" class="btn btn-primary">
-           
+           <br>
             <a href="register_user.php">Register</a>
             <br>
-            <a href="user_profile.php">My profile</a>
-            <br>
-            <a href="create_post.php">Create post</a>
-            <br>
-            <a href="partials/logout.php">logout</a>
+            <?php } ?>
+            
       </form>
     </div>
