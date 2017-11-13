@@ -24,10 +24,12 @@
           <input type="text" name="firstname" required>
           <br>
           <label for="image"> Image: </label>
-          <input type="text" name="lastname" required>
+          <input type="file" name="image" required>
           <br>
-          <label for="info"> Information: </label>
-          <input type="text" name="info" required>
+          <label for="content"> Information: </label>
+          <br>
+          <textarea name="content" rows="10" cols="30">
+          </textarea>
           <br>
           <select name="Category">
           <option value="sunglasses">Sunglasses</option>

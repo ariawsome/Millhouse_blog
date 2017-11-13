@@ -13,6 +13,11 @@
     <div class="nav">
     <a href="index.php">Home </a><a href="about.php"> About</a>
     
+    <h3>categories</h3>
+     <a href="">watches</a><br>
+     <a href="">sunglasses</a><br>
+     <a href="">interior</a><br><br><br>
+     
       <form action="partials/login.php" method="POST">
        
         <?php if(isset($_SESSION["user"])){ ?>
