@@ -8,7 +8,8 @@
 </head>
 <body>
     <div class="container">
-    <div class="jumbotron">     
+    <div class="jumbotron">  
+       
     </div>
     <div class="nav">
     <a href="index.php">Home </a><a href="about.php"> About</a>
