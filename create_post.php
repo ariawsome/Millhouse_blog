@@ -18,10 +18,11 @@
 ?>
 
     <div class="main">
-        <form action="" method="POST" >
+        <form action="new_post.php" method="POST">
       
-           <label for="title"> Title: </label>
+          <label for="title"> Title: </label>
           <input type="text" name="firstname" required>
+          <input type="hidden" name="userid" value="<?php echo $_SESSION["id"]?>">
           <br>
           <label for="image"> Image: </label>
           <input type="file" name="image" required>
