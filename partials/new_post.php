@@ -2,7 +2,6 @@
 session_start();
 
 require 'database.php';
-    var_dump($_POST);
     
 $filename = $_FILES["uploaded_file"]["name"];
 $path = $_FILES["uploaded_file"]["tmp_name"];
@@ -19,6 +18,7 @@ if(move_uploaded_file($path, "../uploaded_images/" . $filename)){
         ":content" => $_POST["content"],
         ":category" => $_POST["category"]
     ));
+    header("Location: /prodjektarbete/index.php");
 }else{
     echo "fail!";
 }
