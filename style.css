@@ -1,5 +1,6 @@
 body{
     margin: 0;
+    background-color: #d2cfd0
 }
 h4{
 margin: 0;
@@ -47,7 +48,6 @@ nav{
 .main{
     float: right;
     width: 80%;
-    background-color: #C4B2AC;
     height: 500px;
     display: inline-block;
 }
