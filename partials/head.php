@@ -12,7 +12,7 @@
     <div class="jumbotron">   
         <div class="logo"> <img src="image/jumbotron/millhouse-logo.svg">
         </div>
-
+    </div>
     <div class="nav">
     <div class="home-about">
         <a href="index.php">Home </a><a href="about.php"> About</a>
