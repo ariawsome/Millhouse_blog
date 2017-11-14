@@ -10,7 +10,7 @@
     <div class="container">
 
     <div class="jumbotron">   
-        <div class="logo"> <img src="image/jumbotron/millhouse-logo.svg">
+        <div class="logo"> <img src="image/jumbotron/millhouse-logo-white.svg">
         </div>
     </div>
     <nav>

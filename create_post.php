@@ -18,29 +18,16 @@
 ?>
 
     <div class="main">
-        <form action="new_post.php" method="POST">
-      
-          <label for="title"> Title: </label>
-          <input type="text" name="firstname" required>
-          <input type="hidden" name="userid" value="<?php echo $_SESSION["id"]?>">
-          <br>
-          <label for="image"> Image: </label>
-          <input type="file" name="image" required>
-          <br>
-          <label for="content"> Information: </label>
-          <br>
-          <textarea name="content" rows="10" cols="30">
-          </textarea>
-          <br>
-          <select name="Category">
-          <option value="sunglasses">Sunglasses</option>
-          <option value="Watches">Watches</option>
-          <option value="Interior">Interior</option>
-          </select>
-          <br>
-          <input type="submit" class="btn btn-primary">
-          
-      </form>
+       <form action="partials/new_post.php" method="post" enctype="multipart/form-data">
+           <input type="hidden" name="userid" value="<?php echo $_SESSION["user"]["id"]; ?>">
+            <label for="title">Title</label><input type="text" name="title" id="title"><br />
+            <label for="image">Image</label><input type="file" name="uploaded_file" id="image"><br />
+            <label for="content">Content</label><textarea name="content" id="content"></textarea><br />
+            <label for="watches">Watches</label><input type="radio" name="category" id="watches" value="watches"><br />
+            <label for="sunglasses">Sunglasses</label><input type="radio" name="category" value="sunglasses" id="sunglasses"><br />
+            <label for="design">Interior design</label><input type="radio" name="category" id="design" value="design"><br /><br />
+            <input type="submit" value="Send">
+        </form>
     </div>
     
 <?php 
