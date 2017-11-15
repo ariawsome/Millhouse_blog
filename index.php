@@ -20,9 +20,18 @@
     <div class="main">
      
 <?php
-    
+    if(isset($_POST['Watches'])){
+    $query = "SELECT posts.id, posts.title, posts.date, posts.image, posts.content, posts.category, posts.user_id, users.firstname, users.lastname, users.email FROM posts INNER JOIN users ON posts.user_id = users.id WHERE posts.category='watches' ORDER BY posts.id DESC";
+    }
+    elseif(isset($_POST['Sunglasses'])){
+    $query = "SELECT posts.id, posts.title, posts.date, posts.image, posts.content, posts.category, posts.user_id, users.firstname, users.lastname, users.email FROM posts INNER JOIN users ON posts.user_id = users.id WHERE posts.category='sunglasses' ORDER BY posts.id DESC";
+    }    
+    elseif(isset($_POST['Interior'])){
+    $query = "SELECT posts.id, posts.title, posts.date, posts.image, posts.content, posts.category, posts.user_id, users.firstname, users.lastname, users.email FROM posts INNER JOIN users ON posts.user_id = users.id WHERE posts.category='interior' ORDER BY posts.id DESC";
+    }    
+    else{  
     $query = "SELECT posts.id, posts.title, posts.date, posts.image, posts.content, posts.category, posts.user_id, users.firstname, users.lastname, users.email FROM posts INNER JOIN users ON posts.user_id = users.id ORDER BY posts.id DESC";
-        
+    }
     $statement = $pdo->prepare($query);  
 	$statement->execute();
 	$posts = $statement->fetchAll(PDO::FETCH_ASSOC);
@@ -39,7 +48,7 @@
      
     <p><?php echo $post["content"];?></p> 
     
-    <p> <?php echo $post["firstname"]." ".$post["lastname"];?> | <?php echo $post["email"]; ?> | <a href="" style="color: blue;">Comments</a></p>
+    <p> <?php echo $post["firstname"]." ".$post["lastname"];?> | <?php echo $post["email"]; ?> | <a href="display_post.php?id=<?php echo $post["id"];?>" style="color: blue;">Comments</a></p>
     
     </article>
    <?php   }  ?>        

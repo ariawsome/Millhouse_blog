@@ -40,7 +40,10 @@
             <input type="radio" name="category" value="Sunglasses" id="sunglasses">
             <br />
             
-            <label for="design">Interior design</label><input type="radio" name="category" id="design" value="Interior"><br /><br />
+
+            <label for="design">Interior design</label>
+            <input type="radio" name="category" id="design" value="Interior"><br /><br />
+
             
             <input type="submit" value="Send">
         </form>
