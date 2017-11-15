@@ -33,14 +33,14 @@
             <textarea name="content" id="content" required></textarea><br />
             
             <label for="watches">Watches</label>
-            <input type="radio" name="category" id="watches" value="watches" required>
+            <input type="radio" name="category" id="watches" value="Watches" required>
             <br />
             
             <label for="sunglasses">Sunglasses</label>
-            <input type="radio" name="category" value="sunglasses" id="sunglasses">
+            <input type="radio" name="category" value="Sunglasses" id="sunglasses">
             <br />
             
-            <label for="design">Interior design</label><input type="radio" name="category" id="design" value="design"><br /><br />
+            <label for="design">Interior design</label><input type="radio" name="category" id="design" value="Interior"><br /><br />
             
             <input type="submit" value="Send">
         </form>
