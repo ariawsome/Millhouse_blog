@@ -1,7 +1,8 @@
 
 body{
+
     margin: 0px;
-    background-color: #C4B2AC;
+    background-color: #d2cfd0;
 }
 
 a{
@@ -69,6 +70,7 @@ padding-left: 10px;
 margin-top: 30px;
    
 }
+
 
 h4{
     font-size: 1em;
@@ -142,4 +144,5 @@ input[type=submit] {
     
 }    
     
+
 
