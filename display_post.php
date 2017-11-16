@@ -39,7 +39,8 @@
     
     </article>
    <?php   }  ?>    
-   <section class="comment_section">  
+   <section class="comment_section" style="background-color:white; width:600px; margin-left: 50px;">  
+   
    <?php if(isset($_SESSION["user"])){ ?>
    <form action="partials/add_comment.php" method="post">
        
@@ -54,16 +55,17 @@
        <input type="submit" value="submit">
    </form>
     <?php }
-       else{
+    else{
            echo "pls logg in to comment!";
-        }
+    }
+       
     $query = "SELECT comment.date, comment.content, comment.post_id, users.firstname, users.lastname, users.email FROM comment INNER JOIN users ON comment.user_id = users.id WHERE comment.post_id = :postID";  
     $statement = $pdo->prepare($query);  
 	$statement->execute(array(":postID" => $_GET["id"]));
 	$posts = $statement->fetchAll(PDO::FETCH_ASSOC);
     foreach($posts as $post){ ?>    
     
-    <article class="post" style="background-color:white; width:600px; margin-left: 50px;">
+    <article class="comment-display" >
     
     <p> <?php echo $post["firstname"]." ".$post["lastname"];?> | <?php echo $post["email"]; ?></p>
     <p><?php echo $post["date"];?></p>
