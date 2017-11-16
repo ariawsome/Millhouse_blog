@@ -4,57 +4,96 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     <link type="text/css" href="style.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
+
 <body>
-    <div class="container">
-
-    <div class="jumbotron">   
-        <div class="logo"> <img src="image/jumbotron/millhouse-logo-white.svg">
-        </div>
-    </div>
-    <nav>
-    <div class="home-about">
-        <a href="index.php">Home </a><a href="about.php"> About</a>
-    </div>
-    <div class="categories">
-    <h3>CATEGORIES</h3>
     
-         <form action="index.php" method="POST">
-             <button type="submit" name="Watches" class="btn btn-default">Watches</button><p></p>
-
-           <button type="submit" name="Sunglasses" class="btn btn-default">Sunglasses</button><p></p>
-
-           <button type="submit" name="Interior" class="btn btn-default">Interior</button>
-
-        </form>
+    
+    <header class="w3-container w3-top w3-blue w3-medium w3-padding-16">
+          <a href="javascript:void(0)" class="w3-left w3-button w3-transparent w3-xxxlarge" onclick="w3_open()">☰</a>
+         
+         <div class="logo"><img src="image/jumbotron/millhouse-logo-white.svg"></div>
+        
+    </header>
+    
+    <div class="container">
+    
+        <nav class="w3-sidebar w3-bar-block w3-white w3-animate-left w3-text-grey w3-collapse w3-top w3-center" style="z-index:3;width:250px;font-weight:bold" id="mySidebar">
+        <br>
+         <div class="logosidebar"><img src="image/jumbotron/millhouse-logo-white.svg"></div>   
+    <div class="home-about">
+        <a href="index.php"><i class="fa fa-home"></i>Home</a>
+        <a href="about.php"><i class="fa fa-users"></i>About</a>
     </div>
-     
-      <form action="partials/login.php" method="POST">
-       
-        <?php if(isset($_SESSION["user"])){ ?>
-            <a href="user_profile.php">My profile</a>
-            <br>
-            <a href="create_post.php">Create post</a>
-            <br>
-            <a href="partials/logout.php">logout</a>
-            <?php } 
-            
-         else{ ?>
-         <h4>Login</h4>
-          <label for="email"> Email </label>
+    
+    <div class="categories">
+        <h3>CATEGORIES</h3>
+</div>
+             <form action="index.php" method="POST">
+               <button type="submit" name="Watches" class="btn btn-default">Watches</button><p></p>
 
-          <input type="text" name="email" class="form-control">
-          <br>
-          <label for="password"> Password </label>
+               <button type="submit" name="Sunglasses" class="btn btn-default">Sunglasses</button><p></p>
 
-          <input type="password" name="password" class="form-control">
-          <br>
-          <input type="submit" class="btn btn-primary">
-           <br>
-            <a href="register_user.php">Register</a>
-            <br>
-            <?php } ?>
-            
-      </form>
+               <button type="submit" name="Interior" class="btn btn-default">Interior</button>
+
+            </form>
+    
+       <div class="menubar">
+         <form action="partials/login.php" method="POST">
+
+            <?php if(isset($_SESSION["user"])){ ?>
+                <a href="user_profile.php">My profile</a>
+                <br>
+                <a href="create_post.php">Create post</a>
+                <br>
+                <a href="partials/logout.php">logout</a>
+                <?php } 
+
+             else{ ?>
+        <div class="categories">
+             <h4>LOGIN</h4>
+        </div>
+        <div class="registrationemail">
+              <label for="email"></label>
+              <input type="text" name="email" class="form-control">
+        </div>
+              <br>
+        <div class="registrationpassword">
+              <label for="password"></label>
+              <input type="password" name="password" class="form-control">
+        </div>
+              <br>
+              <input type="submit" class="btn btn-primary">
+               <br>
+        <div class="register">
+                <a href="register_user.php">Register</a>
+                <br>
+        </div>
+                <?php } ?>
+
+           </form>
+        
+        </div>
+        
     </nav>
+    
+    </div>
+    
+    <script>
+        // Script to open and close sidebar
+        function w3_open() {
+            document.getElementById("mySidebar").style.display = "block";
+        }
+
+        function w3_close() {
+            document.getElementById("mySidebar").style.display = "none";
+        
+        }
+
+    </script>
+    </body>
+
+ 
