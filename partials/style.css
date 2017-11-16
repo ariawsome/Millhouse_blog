@@ -1,0 +1,145 @@
+
+body{
+    margin: 0px;
+    background-color: #C4B2AC;
+}
+
+a{
+    text-decoration: none;
+    color: whitesmoke;
+    font-size: 1.2em;
+}
+
+/*knapp hamburgare*/
+ .w3-button{
+margin-top: 80px;
+
+
+    }
+.logo{
+    display: flex;
+    justify-content: center;
+    
+}
+.logo img{
+    width: 50%;
+}
+.logosidebar{
+ padding: 40px;
+ margin-top: -40px;
+ 
+}
+
+/* jumbotronen*/
+.w3-blue{
+    background-image: url(image/jumbotron/forest1.jpeg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 200px;
+    
+}
+
+/* email,password, categories, bakgrund sidebar*/
+.w3-sidebar{
+    color:#fff!important;
+    background-color:#113a55!important;
+}
+
+.home-about{
+  margin-top: 20PX;
+  display: flex;
+  justify-content: space-around;
+
+}
+
+/*home och about symbol*/
+i{
+    padding:5px;
+}
+
+/*categories - headline*/
+h3{
+ font-size: 1em;
+ 
+}
+.categories{
+display: flex;
+justify-content: flex-start;
+padding-left: 10px;
+margin-top: 30px;
+   
+}
+
+h4{
+    font-size: 1em;
+    
+}
+
+
+.registrationemail , .registrationpassword{
+  display: flex;
+  justify-content:flex-start;
+  padding-left: 10px;
+  font-size: 0.8em;
+  margin-bottom: -10px;
+}
+
+
+input[type=text] , input[type=password] {
+   background-color: #113a55; 
+   font-size: 0.8em;
+   letter-spacing: 0.05em; 
+   color: whitesmoke;
+    width: 220px;
+}
+
+/*categories buttons*/
+ button[type=submit]{
+    width: 120px;
+    background-color: #113a55;
+    display: flex;
+    align-content: flex-start;
+    margin-left: 10px;
+    font-size: 0.8em;
+    color: whitesmoke;
+    
+}
+
+input[type=submit] {
+    width: 120px;
+    display: flex;
+    align-content: flex-start;
+    margin-left: 10px;
+    background-color: #113a55 ;
+    color: whitesmoke;
+    font-size: 0.8em;
+    
+}
+.register{
+  display: flex;
+  align-content: flex-start;
+  margin-left: 10px;
+  margin-top: -15px;
+  font-size: 0.8em;
+}
+
+
+@media screen and (min-width: 1024px) {
+
+    
+.logosidebar{
+        display: none;
+    }
+    
+.w3-sidebar{
+    margin-top:200px;
+}
+    .w3-button{
+        display: none;
+    }
+    
+    
+    
+}    
+    
+
