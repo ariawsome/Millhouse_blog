@@ -125,7 +125,11 @@ input[type=submit] {
   font-size: 0.8em;
 }
 
-
+.main{
+    position: relative;
+    top:200px;
+    padding-left: 2%;
+}
 @media screen and (min-width: 1024px) {
 
     
@@ -139,8 +143,10 @@ input[type=submit] {
     .w3-button{
         display: none;
     }
-    
-    
+
+    .main{
+        padding-left: 20%;
+    }
     
 }    
     
