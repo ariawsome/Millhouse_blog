@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     <link type="text/css" href="style.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro" rel="stylesheet">
 </head>
 
 <body>
@@ -32,7 +33,7 @@
     <div class="categories">
         <h3>CATEGORIES</h3>
 </div>
-             <form action="index.php" method="POST">
+             <form action="index.php" method="POST" class="menu_button">
                <button type="submit" name="Watches" class="btn btn-default">Watches</button><p></p>
 
                <button type="submit" name="Sunglasses" class="btn btn-default">Sunglasses</button><p></p>
@@ -42,14 +43,16 @@
             </form>
     
        <div class="menubar">
-         <form action="partials/login.php" method="POST">
+         <form action="partials/login.php" method="POST" class="menu_send">
 
             <?php if(isset($_SESSION["user"])){ ?>
-                <a href="user_profile.php">My profile</a>
+        <div class="linkprofile">
+                <a href="user_profile.php">My profile</a><p></p>
                 <br>
                 <a href="create_post.php">Create post</a>
                 <br>
                 <a href="partials/logout.php">logout</a>
+        </div>
                 <?php } 
 
              else{ ?>
@@ -66,7 +69,7 @@
               <input type="password" name="password" class="form-control">
         </div>
               <br>
-              <input type="submit" class="btn btn-primary">
+              <input type="submit" class="btn btn-primary" value="Login">
                <br>
         <div class="register">
                 <a href="register_user.php">Register</a>

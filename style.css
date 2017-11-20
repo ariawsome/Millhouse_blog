@@ -3,6 +3,8 @@ body{
 
     margin: 0px;
     background-color: #d2cfd0;
+    font-family: 'Source Sans Pro', sans-serif;
+    letter-spacing: 0.1em;
 }
 
 a{
@@ -88,7 +90,6 @@ h4{
 
 
 input[type=text] , input[type=password] {
-   background-color: #113a55; 
    font-size: 0.8em;
    letter-spacing: 0.05em; 
    color: whitesmoke;
@@ -96,25 +97,42 @@ input[type=text] , input[type=password] {
 }
 
 /*categories buttons*/
- button[type=submit]{
+ .menu_button button[type=submit]{
+    background-color: transparent;
+    border: none;
     width: 120px;
-    background-color: #113a55;
+    height: 10px;
     display: flex;
     align-content: flex-start;
     margin-left: 10px;
-    font-size: 0.8em;
+    font-size: 0.9em;
+    letter-spacing: 0.1em;
     color: whitesmoke;
     
 }
 
-input[type=submit] {
-    width: 120px;
-    display: flex;
-    align-content: flex-start;
-    margin-left: 10px;
-    background-color: #113a55 ;
-    color: whitesmoke;
-    font-size: 0.8em;
+.menu_send input[type=submit] {
+  display: flex;
+  justify-content: flex-start;
+  margin-left: 10px;
+  background: #ffffff;
+  background-image: -webkit-linear-gradient(top, #ffffff, #ffffff);
+  background-image: -moz-linear-gradient(top, #ffffff, #ffffff);
+  background-image: -ms-linear-gradient(top, #ffffff, #ffffff);
+  background-image: -o-linear-gradient(top, #ffffff, #ffffff);
+  background-image: linear-gradient(to bottom, #ffffff, #ffffff);
+  -webkit-border-radius: 8;
+  -moz-border-radius: 8;
+  border-radius: 8px;
+  -webkit-box-shadow: 0px 1px 3px #666666;
+  -moz-box-shadow: 0px 1px 3px #666666;
+  box-shadow: 0px 1px 3px #666666;
+  font-family: Arial;
+  color: #000000;
+  font-size: 1em;
+  font-weight: 100;
+  padding: 0px 20px 0px 20px;
+  text-decoration: none;
     
 }
 .register{
@@ -123,6 +141,14 @@ input[type=submit] {
   margin-left: 10px;
   margin-top: -15px;
   font-size: 0.8em;
+}
+
+.linkprofile{
+  text-align: left;
+  margin-left: 15px;
+  font-size: 0.8em;
+  margin-top: 30px;
+  
 }
 
 .main{
