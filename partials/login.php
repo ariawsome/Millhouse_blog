@@ -18,11 +18,9 @@ if( password_verify($password, $fetched_user["password"]) ){
   $_SESSION["user"] = $fetched_user;
   $_SESSION["loggedIn"] = true;
 
-
   header("Location: /prodjektarbete/index.php?success=true");
-
-} else {
-
+}
+else {
   header("Location: /prodjektarbete/index.php?error=Wrong username or password&success=false");
   
 }

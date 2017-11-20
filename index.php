@@ -42,7 +42,7 @@
     
    <h2><?php echo $post["title"];?></h2>
    
-    <p><?php echo $post["date"];?> | <?php echo $post["category"];?></p>   
+    <p><?php echo $post["date"];?> | <?php echo $post["category"];?> | <a href="edit_post.php?post_id=<?php echo $post["id"];?>">Edit</a> | <a href="partials/delete.php?post_id=<?php echo $post["id"];?>">Delete</a> </p>   
       
     <img src="<?php echo $post["image"];?>" style="width:400px; height:auto;">
      
