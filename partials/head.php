@@ -12,11 +12,12 @@
 
 <body>
     
-    
-    <header class="w3-container w3-top w3-blue w3-medium w3-padding-16">
-          <a href="javascript:void(0)" class="w3-left w3-button w3-transparent w3-xxxlarge" onclick="w3_open()">☰</a>
-         
-         <div class="logo"><img src="image/jumbotron/millhouse-logo-white.svg"></div>
+   
+    <header class="w3-container w3-top w3-blue w3-medium">
+       
+        <a href="javascript:void(0)" class="w3-left w3-button w3-transparent w3-xxxlarge" onclick="w3_open()">☰</a>
+        
+        <div class="logo"><img src="image/jumbotron/millhouse-logo-white.svg"></div>
         
     </header>
     
@@ -24,12 +25,17 @@
     
         <nav class="w3-sidebar w3-bar-block w3-white w3-animate-left w3-text-grey w3-collapse w3-top w3-center" style="z-index:3;width:250px;font-weight:bold" id="mySidebar">
         <br>
-         <div class="logosidebar"><img src="image/jumbotron/millhouse-logo-white.svg"></div>   
+         <div class="logosidebar">
+             <img src="image/jumbotron/millhouse-logo-white.svg">
+             <a href="javascript:void(0)" class="w3-left w3-button w3-transparent w3-large" onclick="w3_close()"> <i class= "fa fa-times"></i></a>
+        </div>   
     <div class="home-about">
         <a href="index.php"><i class="fa fa-home"></i>Home</a>
         <a href="about.php"><i class="fa fa-users"></i>About</a>
+        
+        
     </div>
-    
+     
     <div class="categories">
         <h3>CATEGORIES</h3>
 </div>
@@ -47,7 +53,7 @@
 
             <?php if(isset($_SESSION["user"])){ ?>
         <div class="linkprofile">
-                <a href="user_profile.php">My profile</a><p></p>
+                <a href="user_profile.php">My profile</a>
                 <br>
                 <a href="create_post.php">Create post</a>
                 <br>
@@ -89,10 +95,12 @@
         // Script to open and close sidebar
         function w3_open() {
             document.getElementById("mySidebar").style.display = "block";
+            document.getElementById("myOverlay").style.display = "block";
         }
 
         function w3_close() {
             document.getElementById("mySidebar").style.display = "none";
+            document.getElementById("myOverlay").style.display = "none";
         
         }
 

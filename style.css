@@ -13,26 +13,53 @@ a{
     font-size: 1.2em;
 }
 
+header{
+    display: inline-block;
+}
+button:focus {outline:0;}
+
 /*knapp hamburgare*/
+
  .w3-button{
-margin-top: 80px;
-
-
-    }
-.logo{
-    display: flex;
-    justify-content: center;
+    margin-top: 50px;
+    padding-left:20px;
     
 }
-.logo img{
-    width: 50%;
-}
-.logosidebar{
- padding: 40px;
- margin-top: -40px;
- 
+
+.logo{
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
 }
 
+.logo img{
+    width: 60%;
+    display: flex;
+    justify-content: center;
+   
+}
+
+/* SIDEBAR */
+.logosidebar{
+ padding: 40px 0px 40px 40px;
+ 
+ 
+}
+.logosidebar img{
+    width: 80%;
+    display:flex;
+    justify-content: center;
+    margin-top:-20px;
+    
+  
+}
+.logosidebar a {
+    margin-top:0px;
+    position:absolute;
+    top:0px;
+    right:0px;
+  
+}
 /* jumbotronen*/
 .w3-blue{
     background-image: url(image/jumbotron/forest1.jpeg);
@@ -92,11 +119,12 @@ h4{
 input[type=text] , input[type=password] {
    font-size: 0.8em;
    letter-spacing: 0.05em; 
-   color: whitesmoke;
-    width: 220px;
+   color: black;
+   width: 220px;
 }
 
 /*categories buttons*/
+
  .menu_button button[type=submit]{
     background-color: transparent;
     border: none;
