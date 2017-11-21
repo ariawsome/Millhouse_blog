@@ -4,8 +4,6 @@
     require 'partials/head.php';
     
 ?>
-
-
     <div class="main">
         <h4>Register</h4>
       <form action="partials/register.php" method="POST" class="registerform">

@@ -38,7 +38,7 @@
      
     <div class="categories">
         <h3>CATEGORIES</h3>
-</div>
+    </div>
              <form action="index.php" method="POST" class="menu_button">
                <button type="submit" name="Watches" class="btn btn-default">Watches</button><p></p>
 
@@ -55,8 +55,12 @@
         <div class="linkprofile">
                 <a href="user_profile.php">My profile</a>
                 <br>
+                <?php if(isset($_SESSION["user"]) && $_SESSION["user"]["admin"] == 1){ 
+                ?>
+                
                 <a href="create_post.php">Create post</a>
                 <br>
+                <?php }?>
                 <a href="partials/logout.php">logout</a>
         </div>
                 <?php } 
@@ -101,10 +105,6 @@
         function w3_close() {
             document.getElementById("mySidebar").style.display = "none";
             document.getElementById("myOverlay").style.display = "none";
-        
         }
-
     </script>
     </body>
-
- 
