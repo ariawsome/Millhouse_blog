@@ -42,7 +42,14 @@
     
    <h2><?php echo $post["title"];?></h2>
    
-    <p><?php echo $post["date"];?> | <?php echo $post["category"];?> | <a href="edit_post.php?post_id=<?php echo $post["id"];?>">Edit</a> | <a href="partials/delete.php?post_id=<?php echo $post["id"];?>">Delete</a> </p>   
+    <p><?php echo $post["date"];?> | 
+     <?php echo $post["category"];?>
+     <?php
+     if(isset($_SESSION["user"]) && $_SESSION["user"]["id"] == $post["user_id"]){ ?>
+      | <a href="edit_post.php?post_id=<?php echo $post["id"];?>">Edit</a> | 
+     <a href="partials/delete.php?post_id=<?php echo $post["id"];?>">Delete</a> 
+     <?php } ?>
+     </p>   
       
     <img src="<?php echo $post["image"];?>" style="width:400px; height:auto;">
      

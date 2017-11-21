@@ -1,5 +1,6 @@
 <?php
     session_start();
+if(isset($_SESSION["user"])){
     require 'partials/database.php';
     
     
@@ -21,13 +22,13 @@
         <?php
         
     
-            if(isset($_SESSION["user"])){
+            
                 echo "<h1 class='text-center'>" . 
                     "Welcome ".$_SESSION["user"]["firstname"]." to you profile"."</h1>";
                 
                 $session_id = $_SESSION["user"]["id"];
                 
-                
+                if(isset($_SESSION["user"]) && $_SESSION["user"]["admin"] == 1){
                 $query = "SELECT COUNT(user_id) AS amount_of_posts FROM posts WHERE user_id = $session_id";
         
                 $statement = $pdo->prepare($query);  
@@ -35,10 +36,10 @@
                 $display_posts_amount = $statement->fetchAll(PDO::FETCH_ASSOC); ?>
 
                 <p>Total amount of posts: <?php echo $display_posts_amount[0]['amount_of_posts'];?></p>
+                <?php
+                }
 
-
-
-                <?php $query = "SELECT COUNT(user_id) AS amount_of_comments FROM comment WHERE user_id = $session_id";
+                $query = "SELECT COUNT(user_id) AS amount_of_comments FROM comment WHERE user_id = $session_id";
 
                 $statement = $pdo->prepare($query);  
                 $statement->execute();
@@ -46,7 +47,7 @@
 
         <p>Total amount of comments: <?php echo $display_comment_amount[0]['amount_of_comments'];?></p><?php 
                 
-                
+               if(isset($_SESSION["user"]) && $_SESSION["user"]["admin"] == 1){ 
                 $query = "SELECT posts.id, posts.title, posts.date, posts.category, posts.user_id FROM posts WHERE user_id = $session_id ORDER BY posts.id DESC";
 
                 $statement = $pdo->prepare($query);  
@@ -61,7 +62,7 @@
                         </a>
                    <?php }
                 }
-            }
+               }
         
            $query = "SELECT comment.id, comment.content, comment.date, comment.user_id, comment.post_id FROM comment WHERE user_id = $session_id ORDER BY comment.id DESC";
         
@@ -78,13 +79,16 @@
                <?php }
             }
         
-        
+        if(isset($_SESSION["user"]) && $_SESSION["user"]["admin"] == 1){
         ?>
-            
        <a href="create_post.php">Create post</a>
+       <?php } ?>
     </div>
 
     
 <?php 
     require 'partials/footer.php';
-?>
+}
+else{
+header("Location: /prodjektarbete/index.php");
+}?>
