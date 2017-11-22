@@ -184,6 +184,52 @@ input[type=text] , input[type=password] {
     top:200px;
     padding-left: 2%;
 }
+
+/*start styling posts - under categories*/
+
+/*title*/
+.post h2{
+   margin-left: 15px;
+}
+/*date, category, text to image*/
+.post p{
+    margin-left: 15px;
+}
+
+
+/*background - white*/
+.post{
+    background-color:white;
+    width:95%;
+    margin-left: 5px;
+    margin-bottom: 30px;
+}
+
+/*links delete and edit*/
+.post a{
+    color: black;
+    font-size: 1em;
+    font-family:'Source Sans Pro', sans-serif;
+}
+
+
+/*the image in the post*/
+.post img {
+ margin-left: 15px;
+ width:90%; 
+ height:auto;
+}
+
+
+/*user details - posts */
+.userdetails a{
+  color: blue;
+  font-size: 0.8em; 
+}
+.userdetails p{
+    font-size: 0.8em;
+}
+
 @media screen and (min-width: 1024px) {
 
     
@@ -202,6 +248,11 @@ input[type=text] , input[type=password] {
         padding-left: 20%;
     }
     
+    /*start styling posts - under categories-desktop*/
+    .post{
+        margin-left: 50px;
+        width: 90%;
+    }   
 }    
     
 

@@ -3,7 +3,7 @@
     require 'partials/database.php';
     
     
-    if(isset($_SESSION["user"])){
+   /* if(isset($_SESSION["user"])){
       echo "<h1 class='text-center'>" . 
               $_SESSION["user"]["email"] . 
             "</h1>";
@@ -13,8 +13,9 @@
               $_GET["error"] . 
             "</h1>";
     }
+    */
 
-    require 'partials/head.php';
+    require 'partials/head.php'; 
 ?>
 
     <div class="main">
@@ -38,7 +39,7 @@
 
     foreach($posts as $post){ ?>    
     
-    <article class="post" style="background-color:white; width:600px; margin-left: 50px;">
+    <article class="post">
     
    <h2><?php echo $post["title"];?></h2>
    
@@ -50,12 +51,14 @@
      <a href="partials/delete.php?post_id=<?php echo $post["id"];?>">Delete</a> 
      <?php } ?>
      </p>   
-      
-    <img src="<?php echo $post["image"];?>" style="width:400px; height:auto;">
+     
+    <img src="<?php echo $post["image"];?>">
      
     <p><?php echo $post["content"];?></p> 
-    
-    <p> <?php echo $post["firstname"]." ".$post["lastname"];?> | <?php echo $post["email"]; ?> | <a href="display_post.php?id=<?php echo $post["id"];?>" style="color: blue;">Comments</a></p>
+   
+ <div class=userdetails> 
+    <p> <?php echo $post["firstname"]." ".$post["lastname"];?> | <?php echo $post["email"]; ?> | <a href="display_post.php?id=<?php echo $post["id"];?>" >Comments</a></p>
+    </div>
     
     </article>
    <?php   }  ?>        
