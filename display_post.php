@@ -12,7 +12,7 @@
       echo "<h1 class='alert alert-danger'>" . 
               $_GET["error"] . 
             "</h1>";
-    }
+    } 
 
     require 'partials/head.php';
 ?>
@@ -25,13 +25,13 @@
 	$posts = $statement->fetchAll(PDO::FETCH_ASSOC);
     foreach($posts as $post){ ?>    
     
-    <article class="post" style="background-color:white; width:600px; margin-left: 50px;">
+    <article class="post">
     
    <h2><?php echo $post["title"];?></h2>
    
     <p><?php echo $post["date"];?> | <?php echo $post["category"];?></p>   
       
-    <img src="<?php echo $post["image"];?>" style="width:400px; height:auto;">
+    <img src="<?php echo $post["image"];?>">
      
     <p><?php echo $post["content"];?></p> 
     
@@ -39,7 +39,7 @@
     
     </article>
    <?php   }  ?>    
-   <section class="comment_section" style="background-color:white; width:600px; margin-left: 50px;">  
+   <section class="comment_section">  
    
    <?php if(isset($_SESSION["user"])){ ?>
    <form action="partials/add_comment.php" method="post">
@@ -47,13 +47,15 @@
        <input type="hidden" name="userid" value="<?php echo $_SESSION["user"]["id"]; ?>">
        
        <input type="hidden" name="postid" value="<?php echo $_GET["id"]; ?>">
-       
-       <label for="content">Comment:</label>
+      
+       <h2>Write a comment</h2>
+       <label for="content">Comment</label>
        <br>
        <textarea name="comment" id="content" cols="30" rows="10" placeholder="Write a good comment!"></textarea>
        <br>
-       <input type="submit" value="submit">
+       <input type="submit" value="Send">
    </form>
+   <h2>Comments</h2>
     <?php }
     else{
            echo "pls logg in to comment!";
@@ -65,8 +67,8 @@
 	$posts = $statement->fetchAll(PDO::FETCH_ASSOC);
     foreach($posts as $post){ ?>    
     
+     
     <article class="comment-display" >
-    
     <p> <?php echo $post["firstname"]." ".$post["lastname"];?> | <?php echo $post["email"]; ?></p>
     <p><?php echo $post["date"];?></p>
     <p><?php echo $post["content"];?></p>

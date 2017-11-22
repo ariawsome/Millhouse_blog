@@ -187,18 +187,14 @@ input[type=text] , input[type=password] {
 
 /*start styling posts - under categories*/
 
-/*title*/
-.post h2{
-   margin-left: 15px;
-}
-/*date, category, text to image*/
-.post p{
-    margin-left: 15px;
+/*title, date, category, text to post*/
+.post h2 , h2 , label , .post p{
+   margin-left: 5%;
 }
 
 
-/*background - white*/
-.post{
+/*background - white comment and post*/
+.post , .comment_section{
     background-color:white;
     width:95%;
     margin-left: 5px;
@@ -215,7 +211,7 @@ input[type=text] , input[type=password] {
 
 /*the image in the post*/
 .post img {
- margin-left: 15px;
+ margin-left: 5%;
  width:90%; 
  height:auto;
 }
@@ -228,6 +224,17 @@ input[type=text] , input[type=password] {
 }
 .userdetails p{
     font-size: 0.8em;
+}
+
+textarea{
+    border:solid black 0.5px;
+    height: 80px;
+    width: 80%;
+    margin-left: 5%;
+    margin-top: 5px;
+}
+.comment-display p{
+    margin-left: 5%;
 }
 
 @media screen and (min-width: 1024px) {
@@ -249,8 +256,8 @@ input[type=text] , input[type=password] {
     }
     
     /*start styling posts - under categories-desktop*/
-    .post{
-        margin-left: 50px;
+    .post, .comment_section{
+        margin-left: 60px;
         width: 90%;
     }   
 }    
