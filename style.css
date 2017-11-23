@@ -196,7 +196,7 @@ input[type=text] , input[type=password] {
 
 /*title, date, category, text to post*/
 
-.post h2 , h2 , .post p, .comment_section label , .comment-display p {
+.post h2, .post p, .comment_section label, .comment-display p {
    margin-left: 5%;
 }
 
