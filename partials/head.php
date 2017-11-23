@@ -17,7 +17,7 @@
        
         <a href="javascript:void(0)" class="w3-left w3-button w3-transparent w3-xxxlarge" onclick="w3_open()">☰</a>
         
-        <div class="logo"><a href="index.php"><img src="image/jumbotron/millhouse-logo-white.svg" alt="logo"></a></div>
+        <a href="index.php"><div class="logo"><img src="image/jumbotron/millhouse-logo-white.svg" alt="logo"></div></a>
         
     </header>
     
