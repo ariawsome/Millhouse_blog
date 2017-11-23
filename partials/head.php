@@ -50,9 +50,10 @@
     
        <div class="menubar">
          <form action="partials/login.php" method="POST" class="menu_send">
-
+        
             <?php if(isset($_SESSION["user"])){ ?>
         <div class="linkprofile">
+                <h3><?= $_SESSION["user"]["firstname"] . " " . $_SESSION["user"]["lastname"] ?></h3>
                 <a href="user_profile.php">My profile</a>
                 <br>
                 <?php if(isset($_SESSION["user"]) && $_SESSION["user"]["admin"] == 1){ 
@@ -61,7 +62,7 @@
                 <a href="create_post.php">Create post</a>
                 <br>
                 <?php }?>
-                <a href="partials/logout.php">logout</a>
+                <a href="partials/logout.php">Logout</a>
         </div>
                 <?php } 
 

@@ -76,9 +76,11 @@ button:focus {outline:0;}
 }
 
 .home-about{
-  margin-top: 20PX;
-  display: flex;
-  justify-content: space-around;
+    margin-top: 20px;
+    padding-left: 15px;
+    padding-right: 45px;
+    display: flex;
+    justify-content: space-between;
 
 }
 
@@ -95,7 +97,7 @@ h3{
 .categories{
 display: flex;
 justify-content: flex-start;
-padding-left: 10px;
+padding-left: 15px;
 margin-top: 30px;
    
 }
@@ -110,7 +112,6 @@ h4{
 .registrationemail , .registrationpassword{
   display: flex;
   justify-content:flex-start;
-  padding-left: 10px;
   font-size: 0.8em;
   margin-bottom: -10px;
 }
@@ -128,7 +129,6 @@ input[type=text] , input[type=password] {
  .menu_button button[type=submit]{
     background-color: transparent;
     border: none;
-    width: 120px;
     height: 10px;
     display: flex;
     align-content: flex-start;
@@ -136,6 +136,7 @@ input[type=text] , input[type=password] {
     font-size: 0.9em;
     letter-spacing: 0.1em;
     color: whitesmoke;
+    cursor: pointer;
     
 }
 
@@ -161,7 +162,7 @@ input[type=text] , input[type=password] {
   font-weight: 100;
   padding: 0px 20px 0px 20px;
   text-decoration: none;
-    
+    border: none;
 }
 .register{
   display: flex;
@@ -175,8 +176,12 @@ input[type=text] , input[type=password] {
   text-align: left;
   margin-left: 15px;
   font-size: 0.8em;
-  margin-top: 30px;
-  
+  margin-top: 30px; 
+}
+
+.linkprofile h3 {
+    text-transform: uppercase;
+    font-size: 1.2em;
 }
 
 .main{
@@ -188,7 +193,7 @@ input[type=text] , input[type=password] {
 /*start styling posts - under categories*/
 
 /*title, date, category, text to post*/
-.post h2 , h2 , label , .post p{
+.post h2 , label , .post p{
    margin-left: 5%;
 }
 
