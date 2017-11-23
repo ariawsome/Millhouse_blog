@@ -48,14 +48,20 @@
        
        <input type="hidden" name="postid" value="<?php echo $_GET["id"]; ?>">
        
+    <div class="headlines-comment">
        <h2>Write a comment</h2>
+     </div>
+       
        <label for="content">Comment</label>
        <br>
        <textarea name="comment" id="content" cols="30" rows="10" placeholder="Write a good comment!"></textarea>
        <br>
        <input type="submit" value="Send">
    </form>
-   <h2>Comments</h2>
+   <div class="headlines-comment">
+      <h2>Comments</h2>
+   </div>
+   
     <?php }
     else{
            echo "pls logg in to comment!";
@@ -69,10 +75,11 @@
     
      
     <article class="comment-display" >
-    <p> <?php echo $post["firstname"]." ".$post["lastname"];?> | <?php echo $post["email"]; ?></p>
-    <p><?php echo $post["date"];?></p>
-    <p><?php echo $post["content"];?></p>
     
+    <p class="name-email"> <?php echo $post["firstname"]." ".$post["lastname"];?> | <?php echo $post["email"]; ?></p>
+    <p class="date"><?php echo $post["date"];?></p>
+    <p class="content"><?php echo $post["content"];?></p>
+    <hr>
     </article>
    <?php   }  ?>
    

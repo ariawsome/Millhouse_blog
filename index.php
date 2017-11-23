@@ -47,8 +47,8 @@
      <?php echo $post["category"];?>
      <?php
      if(isset($_SESSION["user"]) && $_SESSION["user"]["id"] == $post["user_id"]){ ?>
-      | <a href="edit_post.php?post_id=<?php echo $post["id"];?>">Edit</a> | 
-     <a href="partials/delete.php?post_id=<?php echo $post["id"];?>">Delete</a> 
+      | <a href="edit_post.php?post_id=<?php echo $post["id"];?>">EDIT</a> | 
+     <a href="partials/delete.php?post_id=<?php echo $post["id"];?>">DELETE</a> 
      <?php } ?>
      </p>   
      
