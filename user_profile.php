@@ -18,8 +18,10 @@ if(isset($_SESSION["user"])){
     require 'partials/head.php';
 ?>
 
-    <div class="main" style="margin-bottom:30px;">
+    <main class="main">
+       <div class="user_profile">
         <h1><?= $_SESSION["user"]["firstname"] . " " . $_SESSION["user"]["lastname"] ?></h1>
+        <p><?= $_SESSION["user"]["email"] ?></p>
 
     <?php
         $session_id = $_SESSION["user"]["id"];
@@ -34,7 +36,7 @@ if(isset($_SESSION["user"])){
             $statement->execute();
             $display_posts_amount = $statement->fetchAll(PDO::FETCH_ASSOC); 
     ?>
-            <p>Total amount of posts: <?= $display_posts_amount[0]['amount_of_posts'];?></p>
+            <p>Total amount of blog posts: <?= $display_posts_amount[0]['amount_of_posts'];?><br />
     <?php
         }
 
@@ -47,17 +49,12 @@ if(isset($_SESSION["user"])){
         $statement->execute();
         $display_comment_amount = $statement->fetchAll(PDO::FETCH_ASSOC);
     ?>
-        <p>Total amount of comments: <?= $display_comment_amount[0]['amount_of_comments'] ;?></p>
-        
-        <hr style="border: 0; height: 1px; background-image: -webkit-linear-gradient(left, #d2cfd0, #8c8b8b, #d2cfd0); background-image: -moz-linear-gradient(left, #d2cfd0, #8c8b8b, #d2cfd0); background-image: -ms-linear-gradient(left, #d2cfd0, #8c8b8b, #d2cfd0); background-image: -o-linear-gradient(left, #d2cfd0, #8c8b8b, #d2cfd0);" />
-        
-        <!--div class="w3-row"-->
+           Total amount of comments: <?= $display_comment_amount[0]['amount_of_comments'] ;?></p>
         
     <?php
         if(isset($_SESSION["user"]) && $_SESSION["user"]["admin"] == 1){
     ?>
-            <div style="float: left; display: flex; flex-direction: column; margin-right: 60px; margin-bottom:30px;">
-            <!--div class="w3-half"-->
+            <div class="w3-half">
             <h2>My latest blog posts</h2>
     <?php
             // Print the five latest posts the logged in user have created
@@ -72,10 +69,9 @@ if(isset($_SESSION["user"])){
             
             for($i=0; $i<5; $i++){
                 if(isset($posts[$i])){ ?>
-                    <a href="display_post.php?id=<?= $posts[$i]["id"] ?>" style="background:white; display:block; width:300px; color:black; margin-bottom: 20px; padding: 10px;">
-                        <h3 style="margin:0;"><?= $posts[$i]["title"]; ?></h3>
-                        <p style="margin:0; font-size:0.7em;"><?= $posts[$i]["date"]; ?> | <?= $posts[$i]["category"]; ?></p>
-                    </a>
+                    <a href="display_post.php?id=<?= $posts[$i]["id"] ?>">
+                        <?= $posts[$i]["date"]; ?> | <?= $posts[$i]["title"]; ?>
+                    </a><br />
     <?php      }
             }
     ?>
@@ -83,8 +79,7 @@ if(isset($_SESSION["user"])){
     <?php } ?>
     
         
-        <div style="float: left; display: flex; flex-direction: column; margin-bottom:30px;">
-           <!--div class="w3-half"-->
+        <div class="w3-half">
             <h2>My latest comments</h2>
     <?php
         // Print the five latest comments the logged in user have created
@@ -100,22 +95,21 @@ if(isset($_SESSION["user"])){
         for($i=0; $i<5; $i++){
             if(isset($comment[$i])){ 
      ?>
-                <a href="display_post.php?id=<?= $comment[$i]["post_id"] ?>" style="background:white; display:block; width:300px; color:black; margin-bottom: 20px; padding: 10px;">
-                    <p style="margin:0; font-size:0.8em;"><?= $comment[$i]["content"]; ?></p>
-                    <p style="margin:0; font-size:0.7em;"><?= $comment[$i]["date"]; ?></p>
-                </a>
+                <a href="display_post.php?id=<?= $comment[$i]["post_id"] ?>">
+                    <?= $comment[$i]["date"]; ?> | <?= $comment[$i]["content"]; ?>
+                </a><br />
      <?php  }
         }
      ?>
         </div>
-        <div style="clear:both;"></div>
+        <div class="clear"></div>
     <?php
         if(isset($_SESSION["user"]) && $_SESSION["user"]["admin"] == 1){
      ?>
-           <a href="create_post.php" style="background: white; padding: 4px 6px 7px 6px; font-size: 0.9em; color: black; border-radius: 5px;">Create post</a>
+           <a class="create_post_btn" href="create_post.php">Create post</a>
      <?php } ?>
-        <!--/div-->
-</div>
+    </div>
+</main>
 
 <?php 
     require 'partials/footer.php';

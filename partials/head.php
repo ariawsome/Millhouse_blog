@@ -40,9 +40,9 @@
         <h3>CATEGORIES</h3>
     </div>
              <form action="index.php" method="POST" class="menu_button">
-               <button type="submit" name="Watches" class="btn btn-default">Watches</button><p></p>
+               <button type="submit" name="Watches" class="btn btn-default">Watches</button>
 
-               <button type="submit" name="Sunglasses" class="btn btn-default">Sunglasses</button><p></p>
+               <button type="submit" name="Sunglasses" class="btn btn-default">Sunglasses</button>
 
                <button type="submit" name="Interior" class="btn btn-default">Interior</button>
 
@@ -71,15 +71,11 @@
              <h4>LOGIN</h4>
         </div>
         <div class="registrationemail">
-              <label for="email"></label>
-              <input type="text" name="email" class="form-control">
+              <input type="text" name="email" class="form-control" placeholder="E-mail address">
         </div>
-              <br>
         <div class="registrationpassword">
-              <label for="password"></label>
-              <input type="password" name="password" class="form-control">
+              <input type="password" name="password" class="form-control" placeholder="Password">
         </div>
-              <br>
               <input type="submit" class="btn btn-primary" value="Login">
                <br>
         <div class="register">
