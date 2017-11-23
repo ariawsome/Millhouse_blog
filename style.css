@@ -190,7 +190,7 @@ input[type=text] , input[type=password] {
 /*start styling posts - under categories*/
 
 /*title, date, category, text to post*/
-.post h2 , h2 , label , .post p{
+.post h2 , h2 , .post p, .comment_section label , .comment-display p {
    margin-left: 5%;
 }
 
@@ -218,16 +218,7 @@ input[type=text] , input[type=password] {
  height:auto;
 }
 
-
-/*user details - posts */
-.userdetails a{
-  color: blue;
-  font-size: 0.8em; 
-}
-.userdetails p{
-    font-size: 0.8em;
-}
-
+/*start styling comments - some included in above*/
 textarea{
     border:solid black 0.5px;
     height: 80px;
@@ -235,9 +226,41 @@ textarea{
     margin-left: 5%;
     margin-top: 5px;
 }
-.comment-display p{
-    margin-left: 5%;
+
+/*user details - comment link */
+.userdetails a{
+  color: blue;
+  font-size: 0.8em; 
 }
+
+.userdetails p{
+    font-size: 0.8em;
+}
+
+/*send button*/
+.comment_section input[type=submit]{
+  display: flex;
+  justify-content: flex-start;
+  margin-left: 5%;
+  background: #ffffff;
+  background-image: -webkit-linear-gradient(top, #ffffff, #ffffff);
+  background-image: -moz-linear-gradient(top, #ffffff, #ffffff);
+  background-image: -ms-linear-gradient(top, #ffffff, #ffffff);
+  background-image: -o-linear-gradient(top, #ffffff, #ffffff);
+  background-image: linear-gradient(to bottom, #ffffff, #ffffff);
+  -webkit-border-radius: 8;
+  -moz-border-radius: 8;
+  border-radius: 8px;
+  -webkit-box-shadow: 0px 1px 3px #666666;
+  -moz-box-shadow: 0px 1px 3px #666666;
+  box-shadow: 0px 1px 3px #666666;
+  font-family: Arial;
+  color: #000000;
+  font-size: 1em;
+  font-weight: 100;
+  padding: 0px 20px 0px 20
+}
+
 
 @media screen and (min-width: 992px) {
     .main{
@@ -262,9 +285,10 @@ textarea{
     
     /*start styling posts - under categories-desktop*/
     .post, .comment_section{
-        margin-left: 60px;
-        width: 90%;
+        margin-left: 10%;
+        width: 70%;
     }   
+   
 }    
     
 
