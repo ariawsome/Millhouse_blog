@@ -196,8 +196,14 @@ input[type=text] , input[type=password] {
 
 /*title, date, category, text to post*/
 
-.post h2, .post p, .comment_section label, .comment-display p {
+.post h2, .comment_section label, .headlines-comment h2, .comment-display p{
    margin-left: 5%;
+
+}
+.post p{
+    margin-left: 5%;
+    width: 90%;
+    
 }
 
 
@@ -209,13 +215,6 @@ input[type=text] , input[type=password] {
     margin-bottom: 30px;
 }
 
-/*links delete and edit*/
-.post a{
-    color: black;
-    font-size: 1em;
-    font-family:'Source Sans Pro', sans-serif;
-}
-
 
 /*the image in the post*/
 .post img {
@@ -224,23 +223,45 @@ input[type=text] , input[type=password] {
  height:auto;
 }
 
+/*links delete and edit*/
+.post a , .userdetails a{
+    color: #1b89c9;
+    font-size: 1em;
+    
+}
+/*user details - Comment link */
+
+.userdetails p{
+    font-size: 0.8em;
+    
+}
+
 /*start styling comments - some included in above*/
 textarea{
     border:solid black 0.5px;
     height: 80px;
-    width: 80%;
+    width: 70%;
     margin-left: 5%;
     margin-top: 5px;
 }
 
-/*user details - comment link */
-.userdetails a{
-  color: blue;
-  font-size: 0.8em; 
+/* information under comment and comment text*/
+.date{
+margin-top: -20px; 
+font-weight: lighter;
+}
+.name-email{
+    font-weight: bolder;
+    font-size: 1.5;
+}
+.content{
+    width: 70%;
+    
 }
 
-.userdetails p{
-    font-size: 0.8em;
+hr{
+    width: 70%;
+    margin-left: 5%;
 }
 
 /*send button*/
@@ -294,7 +315,10 @@ textarea{
         margin-left: 10%;
         width: 70%;
     }   
-   
+   .userdetails a, .userdetails p{
+  font-size: 1em; 
+}
+
 }    
     
 
