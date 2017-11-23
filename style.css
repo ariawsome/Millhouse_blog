@@ -15,6 +15,7 @@ a{
 
 header{
     display: inline-block;
+    position: relative;
 }
 button:focus {outline:0;}
 
@@ -73,6 +74,7 @@ button:focus {outline:0;}
 .w3-sidebar{
     color:#fff!important;
     background-color:#113a55!important;
+    z-index: 3;
 }
 
 .home-about{
@@ -260,16 +262,18 @@ textarea{
 }
 
 
-
-@media screen and (min-width: 1024px) {
-
-    
-.logosidebar{
-        display: none;
+@media screen and (min-width: 992px) {
+    .main{
+        top: 0px; 
+    }
+.w3-top{
+    position: relative;
+    z-index: 2; 
     }
     
 .w3-sidebar{
-    margin-top:200px;
+    padding-top: 20px;
+    z-index: 1;
 }
     .w3-button{
         display: none;

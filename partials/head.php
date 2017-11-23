@@ -23,7 +23,7 @@
     
     <div class="container">
     
-        <nav class="w3-sidebar w3-bar-block w3-white w3-animate-left w3-text-grey w3-collapse w3-top w3-center" style="z-index:3;width:250px;font-weight:bold" id="mySidebar">
+        <nav class="w3-sidebar w3-bar-block w3-white w3-animate-left w3-text-grey w3-collapse w3-top w3-center" style="width:250px;font-weight:bold" id="mySidebar">
         <br>
          <div class="logosidebar">
              <img src="image/jumbotron/millhouse-logo-white.svg">
@@ -107,3 +107,4 @@
             document.getElementById("myOverlay").style.display = "none";
         }
     </script>
+    </body>
