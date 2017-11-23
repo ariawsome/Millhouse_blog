@@ -3,7 +3,7 @@
     require 'partials/database.php';
     
     
-    if(isset($_SESSION["user"])){
+    /*if(isset($_SESSION["user"])){
       echo "<h1 class='text-center'>" . 
               $_SESSION["user"]["email"] . 
             "</h1>";
@@ -13,7 +13,7 @@
               $_GET["error"] . 
             "</h1>";
     } 
-
+*/
     require 'partials/head.php';
 ?>
 
@@ -47,7 +47,7 @@
        <input type="hidden" name="userid" value="<?php echo $_SESSION["user"]["id"]; ?>">
        
        <input type="hidden" name="postid" value="<?php echo $_GET["id"]; ?>">
-      
+       
        <h2>Write a comment</h2>
        <label for="content">Comment</label>
        <br>
