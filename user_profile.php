@@ -51,11 +51,13 @@ if(isset($_SESSION["user"])){
         
         <hr style="border: 0; height: 1px; background-image: -webkit-linear-gradient(left, #d2cfd0, #8c8b8b, #d2cfd0); background-image: -moz-linear-gradient(left, #d2cfd0, #8c8b8b, #d2cfd0); background-image: -ms-linear-gradient(left, #d2cfd0, #8c8b8b, #d2cfd0); background-image: -o-linear-gradient(left, #d2cfd0, #8c8b8b, #d2cfd0);" />
         
+        <!--div class="w3-row"-->
         
     <?php
         if(isset($_SESSION["user"]) && $_SESSION["user"]["admin"] == 1){
     ?>
             <div style="float: left; display: flex; flex-direction: column; margin-right: 60px; margin-bottom:30px;">
+            <!--div class="w3-half"-->
             <h2>My latest blog posts</h2>
     <?php
             // Print the five latest posts the logged in user have created
@@ -82,6 +84,7 @@ if(isset($_SESSION["user"])){
     
         
         <div style="float: left; display: flex; flex-direction: column; margin-bottom:30px;">
+           <!--div class="w3-half"-->
             <h2>My latest comments</h2>
     <?php
         // Print the five latest comments the logged in user have created
@@ -111,8 +114,8 @@ if(isset($_SESSION["user"])){
      ?>
            <a href="create_post.php" style="background: white; padding: 4px 6px 7px 6px; font-size: 0.9em; color: black; border-radius: 5px;">Create post</a>
      <?php } ?>
-     
-    </div>
+        <!--/div-->
+</div>
 
 <?php 
     require 'partials/footer.php';
