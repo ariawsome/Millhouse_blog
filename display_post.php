@@ -70,7 +70,7 @@
    
     <?php }
     else{
-           echo "pls logg in to comment!";
+           echo "Please login to comment!";
     }
        
     $query = "SELECT comment.date, comment.content, comment.post_id, users.firstname, users.lastname, users.email FROM comment INNER JOIN users ON comment.user_id = users.id WHERE comment.post_id = :postID";  
