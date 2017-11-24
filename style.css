@@ -1,26 +1,40 @@
 
 body{
-
     margin: 0px;
     background-color: #d2cfd0;
-    font-family: 'Source Sans Pro', sans-serif;
-    letter-spacing: 0.1em;
+    //font-family: 'Source Sans Pro', sans-serif;
+    font-family: 'Roboto', sans-serif;
+    letter-spacing: 0.02em;
+    font-weight: 300;
 }
 
 a{
     text-decoration: none;
     color: #1b89c9;
+    font-size: 0.9em;
+}
+
+h1, h2, h3 {
+    font-family: 'Josefin Sans', sans-serif;
 }
 
 nav a {
     color:white;
     font-size: 1.1em;
+    font-weight: 300;
+    display: inline-block;
+    margin-bottom: 3px;
+}
+
+p {
+    font-size: 0.9em;
 }
 
 header{
     display: inline-block;
     position: relative;
 }
+
 button:focus {outline:0;}
 
 .clear{
@@ -146,10 +160,11 @@ input[type=text] , input[type=password] {
     align-content: flex-start;
     margin-left: 10px;
     font-size: 0.9em;
-    letter-spacing: 0.1em;
+    letter-spacing: 0.02em;
     color: whitesmoke;
     cursor: pointer;
-    
+    font-weight: 300;
+    font-family: 'Roboto', sans-serif;
 }
 
 .menu_send input[type=submit] {
@@ -221,6 +236,7 @@ input[type=text] , input[type=password] {
     width:95%;
     margin-left: 5px;
     margin-bottom: 30px;
+    border-radius: 3px;
 }
 
 
@@ -257,7 +273,7 @@ margin-top: -20px;
 font-weight: lighter;
 }
 .name-email{
-    font-weight: bolder;
+    font-weight: 500;
     font-size: 1.5;
 }
 .content, hr{
@@ -340,7 +356,7 @@ font-weight: lighter;
         width: 70%;
     }   
    .userdetails a, .userdetails p{
-  font-size: 1em; 
+  font-size: 0.9em; 
 }
 
 }    
