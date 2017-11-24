@@ -14,6 +14,7 @@ a{
 
 nav a {
     color:white;
+    font-size: 1.1em;
 }
 
 header{
@@ -90,6 +91,10 @@ button:focus {outline:0;}
     display: flex;
     justify-content: space-between;
 
+}
+
+.home-about a{
+    font-size: 1.2em;
 }
 
 /*home och about symbol*/
@@ -207,7 +212,7 @@ input[type=text] , input[type=password] {
 
 
 /*background - white comment and post*/
-.post , .comment_section{
+.post, .comment_section, .user_profile{
     background-color:white;
     width:95%;
     margin-left: 5px;
@@ -250,10 +255,8 @@ textarea{
 
 /*user profile*/
 .user_profile{
-    background: white; 
     padding: 30px; 
     margin-top:30px;
-    width: 95%;
 }
 
 .create_post_btn{
