@@ -29,7 +29,13 @@
     
    <h2><?php echo $post["title"];?></h2>
    
-    <p><?php echo $post["date"];?> | <?php echo $post["category"];?></p>   
+    <p><?php echo $post["date"];?> | 
+     <?php echo $post["category"];
+     if(isset($_SESSION["user"]) && $_SESSION["user"]["id"] == $post["user_id"]){ ?>
+      | <a href="edit_post.php?post_id=<?php echo $post["id"];?>">EDIT</a> | 
+     <a href="partials/delete.php?post_id=<?php echo $post["id"];?>">DELETE</a> 
+     <?php } ?>
+     </p>  
       
     <img src="<?php echo $post["image"];?>">
      
