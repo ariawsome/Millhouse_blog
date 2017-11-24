@@ -207,13 +207,11 @@ input[type=text] , input[type=password] {
 /*title, date, category, text to post*/
 
 .post h2, .comment_section label, .headlines-comment h2, .comment-display p{
-   margin-left: 5%;
+  // margin-left: 5%;
 
 }
 .post p{
-    margin-left: 5%;
     width: 90%;
-    
 }
 
 
@@ -228,8 +226,7 @@ input[type=text] , input[type=password] {
 
 /*the image in the post*/
 .post img {
- margin-left: 5%;
- width:90%; 
+ width:100%; 
  height:auto;
 }
 
@@ -251,7 +248,6 @@ textarea{
     border:solid black 0.5px;
     height: 80px;
     width: 70%;
-    margin-left: 5%;
     margin-top: 5px;
 }
 
@@ -264,18 +260,12 @@ font-weight: lighter;
     font-weight: bolder;
     font-size: 1.5;
 }
-.content{
-    width: 70%;
-    
-}
-
-hr{
-    width: 70%;
-    margin-left: 5%;
+.content, hr{
+    width: 70%; 
 }
 
 /*user profile*/
-.user_profile{
+.user_profile, .post, .comment_section{
     padding: 30px; 
     margin-top:30px;
 }
@@ -303,7 +293,6 @@ hr{
 .comment_section input[type=submit]{
   display: flex;
   justify-content: flex-start;
-  margin-left: 5%;
   background: #ffffff;
   background-image: -webkit-linear-gradient(top, #ffffff, #ffffff);
   background-image: -moz-linear-gradient(top, #ffffff, #ffffff);
