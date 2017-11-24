@@ -216,7 +216,7 @@ input[type=text] , input[type=password] {
 
 
 /*background - white comment and post*/
-.post, .comment_section, .user_profile{
+.post, .comment_section, .user_profile, .about{
     background-color:white;
     width:95%;
     margin-left: 5px;
@@ -265,7 +265,7 @@ font-weight: lighter;
 }
 
 /*user profile*/
-.user_profile, .post, .comment_section{
+.user_profile, .post, .comment_section, .about{
     padding: 30px; 
     margin-top:30px;
 }
@@ -335,7 +335,7 @@ font-weight: lighter;
     }
     
     /*start styling posts - under categories-desktop*/
-    .post, .comment_section, .user_profile{
+    .post, .comment_section, .user_profile, .about{
         margin-left: 10%;
         width: 70%;
     }   
