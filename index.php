@@ -18,50 +18,71 @@
     require 'partials/head.php'; 
 ?>
 
-    <div class="main">
+    <main class="main">
      
 <?php
     if(isset($_POST['Watches'])){
-    $query = "SELECT posts.id, posts.title, posts.date, posts.image, posts.content, posts.category, posts.user_id, users.firstname, users.lastname, users.email FROM posts INNER JOIN users ON posts.user_id = users.id WHERE posts.category='Watches' ORDER BY posts.id DESC";
-    }
+        $query = "SELECT COUNT(comment.post_id) AS amount_of_comments, posts.id, posts.title, posts.date, posts.image, posts.content, posts.category, posts.user_id, users.firstname, users.lastname, users.email 
+                  FROM posts 
+                  INNER JOIN users ON posts.user_id = users.id 
+                  LEFT JOIN comment ON posts.id = comment.post_id 
+                  WHERE posts.category='Watches' 
+                  GROUP BY posts.id ORDER BY posts.id DESC";
+        }
     elseif(isset($_POST['Sunglasses'])){
-    $query = "SELECT posts.id, posts.title, posts.date, posts.image, posts.content, posts.category, posts.user_id, users.firstname, users.lastname, users.email FROM posts INNER JOIN users ON posts.user_id = users.id WHERE posts.category='Sunglasses' ORDER BY posts.id DESC";
+        $query = "SELECT COUNT(comment.post_id) AS amount_of_comments, posts.id, posts.title, posts.date, posts.image, posts.content, posts.category, posts.user_id, users.firstname, users.lastname, users.email 
+                  FROM posts 
+                  INNER JOIN users ON posts.user_id = users.id 
+                  LEFT JOIN comment ON posts.id = comment.post_id 
+                  WHERE posts.category='Sunglasses' 
+                  GROUP BY posts.id 
+                  ORDER BY posts.id DESC";
     }    
     elseif(isset($_POST['Interior'])){
-    $query = "SELECT posts.id, posts.title, posts.date, posts.image, posts.content, posts.category, posts.user_id, users.firstname, users.lastname, users.email FROM posts INNER JOIN users ON posts.user_id = users.id WHERE posts.category='Interior' ORDER BY posts.id DESC";
+        $query = "SELECT COUNT(comment.post_id) AS amount_of_comments, posts.id, posts.title, posts.date, posts.image, posts.content, posts.category, posts.user_id, users.firstname, users.lastname, users.email 
+                  FROM posts 
+                  INNER JOIN users ON posts.user_id = users.id 
+                  LEFT JOIN comment ON posts.id = comment.post_id 
+                  WHERE posts.category='Interior' 
+                  GROUP BY posts.id 
+                  ORDER BY posts.id DESC";
     }    
     else{  
-    $query = "SELECT posts.id, posts.title, posts.date, posts.image, posts.content, posts.category, posts.user_id, users.firstname, users.lastname, users.email FROM posts INNER JOIN users ON posts.user_id = users.id ORDER BY posts.id DESC";
+        $query = "SELECT COUNT(comment.post_id) AS amount_of_comments, posts.id, posts.title, posts.date, posts.image, posts.content, posts.category, posts.user_id, users.firstname, users.lastname, users.email 
+                  FROM posts 
+                  INNER JOIN users ON posts.user_id = users.id 
+                  LEFT JOIN comment ON posts.id = comment.post_id 
+                  GROUP BY posts.id 
+                  ORDER BY posts.id DESC";
     }
     $statement = $pdo->prepare($query);  
 	$statement->execute();
 	$posts = $statement->fetchAll(PDO::FETCH_ASSOC);
 
     foreach($posts as $post){ ?>    
-    
-    <article class="post">
-    
-   <h2><?php echo $post["title"];?></h2>
-   
-    <p><?php echo $post["date"];?> | 
-     <?php echo $post["category"];
-     if(isset($_SESSION["user"]) && $_SESSION["user"]["id"] == $post["user_id"]){ ?>
-      | <a href="edit_post.php?post_id=<?php echo $post["id"];?>">EDIT</a> | 
-     <a href="partials/delete.php?post_id=<?php echo $post["id"];?>">DELETE</a> 
-     <?php } ?>
-     </p>   
-     
-    <img src="<?php echo $post["image"];?>">
-     
-    <p><?php echo $post["content"];?></p> 
-   
- <div class=userdetails> 
-    <p> <?php echo $post["firstname"]." ".$post["lastname"];?> | <?php echo $post["email"]; ?> | <a href="display_post.php?id=<?php echo $post["id"];?>" >Comments</a></p>
-    </div>
-    
-    </article>
-   <?php   }  ?>        
-    </div>
+        <article class="post">
+
+            <h2><?php echo $post["title"];?></h2>
+
+            <p>
+               <?php echo $post["date"];?> | <?php echo $post["category"];
+                if(isset($_SESSION["user"]) && $_SESSION["user"]["id"] == $post["user_id"]){ ?>
+                    | <a href="edit_post.php?post_id=<?php echo $post["id"];?>">EDIT</a> | 
+                    <a href="partials/delete.php?post_id=<?php echo $post["id"];?>">DELETE</a> 
+                <?php } ?>
+            </p>   
+
+            <img src="<?php echo $post["image"];?>">
+
+            <p><?php echo $post["content"];?></p> 
+
+            <div class=userdetails> 
+                <p><a href="mailto:<?php echo $post["email"]; ?>"><?php echo $post["firstname"]." ".$post["lastname"];?></a> | <a href="display_post.php?id=<?php echo $post["id"];?>" >Comments (<?php echo $post["amount_of_comments"]; ?>)</a></p>
+            </div>
+
+        </article>
+   <?php   }  ?>
+   </main>
     
 <?php 
     require 'partials/footer.php';
