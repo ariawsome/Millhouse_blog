@@ -108,7 +108,8 @@ button:focus {outline:0;}
 }
 
 .home-about a{
-    font-size: 1.2em;
+    font-family: 'Josefin Sans', sans-serif;
+    text-transform: uppercase;
 }
 
 /*home och about symbol*/
@@ -149,6 +150,7 @@ input[type=text] , input[type=password] {
    letter-spacing: 0.05em; 
    color: black;
    width: 220px;
+    font-weight: 300;
 }
 
 /*categories buttons*/
@@ -177,13 +179,9 @@ input[type=text] , input[type=password] {
   background-image: -ms-linear-gradient(top, #ffffff, #ffffff);
   background-image: -o-linear-gradient(top, #ffffff, #ffffff);
   background-image: linear-gradient(to bottom, #ffffff, #ffffff);
-  -webkit-border-radius: 8;
-  -moz-border-radius: 8;
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
   border-radius: 8px;
-  -webkit-box-shadow: 0px 1px 3px #666666;
-  -moz-box-shadow: 0px 1px 3px #666666;
-  box-shadow: 0px 1px 3px #666666;
-  font-family: Arial;
   color: #000000;
   font-size: 1em;
   font-weight: 100;
@@ -289,14 +287,25 @@ font-weight: lighter;
 .create_post_btn{
     display: inline-block;
     margin-top: 20px;
-    padding: 4px 6px 5px 6px;
-    font-size: 0.9em;
-    color: black;
-    border-radius: 5px;
-    border: 1px solid;
+    background: #ffffff;
+    background-image: -webkit-linear-gradient(top, #ffffff, #ffffff);
+    background-image: -moz-linear-gradient(top, #ffffff, #ffffff);
+    background-image: -ms-linear-gradient(top, #ffffff, #ffffff);
+    background-image: -o-linear-gradient(top, #ffffff, #ffffff);
+    background-image: linear-gradient(to bottom, #ffffff, #ffffff);
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    border-radius: 8px;
+    -webkit-box-shadow: 0px 1px 3px #666666;
+    -moz-box-shadow: 0px 1px 3px #666666;
+    box-shadow: 0px 1px 3px #666666;
+    color: #000000;
+    font-size: 1em;
+    font-weight: 100;
+    padding: 0px 20px 0px 20px;
 }
 
-.create_post_btn:hover{
+.create_post_btn:hover, .comment_section input[type=submit]:hover, .menu_send input[type=submit]:hover{
     background: #f2f2f2;
 }
 
@@ -315,17 +324,16 @@ font-weight: lighter;
   background-image: -ms-linear-gradient(top, #ffffff, #ffffff);
   background-image: -o-linear-gradient(top, #ffffff, #ffffff);
   background-image: linear-gradient(to bottom, #ffffff, #ffffff);
-  -webkit-border-radius: 8;
-  -moz-border-radius: 8;
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
   border-radius: 8px;
   -webkit-box-shadow: 0px 1px 3px #666666;
   -moz-box-shadow: 0px 1px 3px #666666;
   box-shadow: 0px 1px 3px #666666;
-  font-family: Arial;
   color: #000000;
   font-size: 1em;
   font-weight: 100;
-  padding: 0px 20px 0px 20
+  padding: 0px 20px 0px 20px;
 }
 
 
