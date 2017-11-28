@@ -18,7 +18,7 @@
     require 'partials/head.php'; 
 ?>
 
-    <main class="main">
+    <main>
      
 <?php
     if(isset($_POST['Watches'])){

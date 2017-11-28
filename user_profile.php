@@ -18,7 +18,7 @@ if(isset($_SESSION["user"])){
     require 'partials/head.php';
 ?>
 
-    <main class="main">
+    <main>
        <div class="user_profile">
         <h1><?= $_SESSION["user"]["firstname"] . " " . $_SESSION["user"]["lastname"] ?></h1>
         <p><?= $_SESSION["user"]["email"] ?></p>
