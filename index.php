@@ -77,7 +77,7 @@
             <p><?php echo $post["content"];?></p> 
 
             <div class=userdetails> 
-                <p><a href="mailto:<?php echo $post["email"]; ?>"><?php echo $post["firstname"]." ".$post["lastname"];?></a> | <a href="display_post.php?id=<?php echo $post["id"];?>" >Comments (<?php echo $post["amount_of_comments"]; ?>)</a></p>
+                <p><a href="mailto:<?php echo $post["email"]; ?>"><?php echo $post["firstname"]." ".$post["lastname"];?></a> | <a href="display_post.php?id=<?php echo $post["id"];?>" >COMMENTS (<?php echo $post["amount_of_comments"]; ?>)</a></p>
             </div>
 
         </article>
