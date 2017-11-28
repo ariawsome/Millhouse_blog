@@ -218,9 +218,9 @@ main{
 /*start styling posts - under categories*/
 
 /*title, date, category, text to post*/
-
 .post p{
     width: 90%;
+    margin-top: 30px;
 }
 
 
@@ -263,12 +263,12 @@ textarea{
 
 /* information under comment and comment text*/
 .date{
-margin-top: -20px; 
+margin-top: -15px; 
 font-weight: lighter;
 }
 .name-email{
     font-weight: 500;
-    font-size: 1.5;
+    font-size: 1em;
 }
 .content, hr{
     width: 70%; 
