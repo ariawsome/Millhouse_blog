@@ -18,42 +18,42 @@
     require 'partials/head.php';
 ?>
 
-    <div class="main">
+    <main>
        <div class="create_post">
-           <H1>Create Post</H1>
+           <h1>Create Post</h1>
            
        <form action="partials/new_post.php" method="post" enctype="multipart/form-data">
           
            <input type="hidden" name="userid" value="<?php echo $_SESSION["user"]["id"]; ?>">
          <div class="space">
-            <label for="title"><b>Title</b></label> <br />
+            <label for="title">Title</label>
             <input type="text" name="title" id="title" required><br />
             
-            <label for="image"><b>Image</b></label> <br />
+            <label for="image">Image</label>
             <input type="file" name="uploaded_file" id="image" class="file_image" required><br />
             
-            <label for="content"><b>Add a description</b></label><br />
+            <label for="content">Add a description</label>
             <textarea name="content" id="content" required></textarea><br />
            </div>
     
             <b>Category Selection</b><br />
-        
-            <input type="radio" name="category" id="watches" value="Watches" required>
-            <label for="watches">Watches</label>
-           
-            <br />
-            <input type="radio" name="category" value="Sunglasses" id="sunglasses">
-            <label for="sunglasses">Sunglasses</label>
-            <br />
-            
-            <input type="radio" name="category" id="design" value="Interior">
-            <label for="design">Interior design</label> 
+            <div>
+                <input type="radio" name="category" id="watches" value="Watches" required>
+                <label for="watches">Watches</label>
+            </div>
+            <div>
+                <input type="radio" name="category" value="Sunglasses" id="sunglasses">
+                <label for="sunglasses">Sunglasses</label>
+            </div>
+            <div>
+                <input type="radio" name="category" id="design" value="Interior">
+                <label for="design">Interior design</label> 
+            </div>
       
-            <br />
             <input type="submit" value="Send">
         </form>
         </div>
-    </div>
+    </main>
 
 <?php 
     require 'partials/footer.php';

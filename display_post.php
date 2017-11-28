@@ -17,7 +17,7 @@
     require 'partials/head.php';
 ?>
 
-<div class="main">
+<main>
 <?php   
     $query = "SELECT posts.id, posts.title, posts.date, posts.image, posts.content, posts.category, posts.user_id, users.firstname, users.lastname, users.email FROM posts INNER JOIN users ON posts.user_id = users.id WHERE posts.id = :postID";  
     $statement = $pdo->prepare($query);  
@@ -59,7 +59,6 @@
      </div>
        
        <label for="content">Comment</label>
-       <br>
        <textarea name="comment" id="content" cols="30" rows="10" placeholder="Write a good comment!"></textarea>
        <br>
        <input type="submit" value="Send">
@@ -90,7 +89,7 @@
    <?php   }  ?>
    
    </section>
-</div>
+</main>
     
 <?php 
     require 'partials/footer.php';
