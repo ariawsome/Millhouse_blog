@@ -62,22 +62,24 @@
     foreach($posts as $post){ ?>    
         <article class="post">
 
-            <h2><?php echo $post["title"];?></h2>
+            <h2><?= $post["title"];?></h2>
 
             <p>
-               <?php echo $post["date"];?> | <?php echo $post["category"];
+               <?= $post["date"];?> | <?= $post["category"];
                 if(isset($_SESSION["user"]) && $_SESSION["user"]["id"] == $post["user_id"]){ ?>
-                    | <a href="edit_post.php?post_id=<?php echo $post["id"];?>">EDIT</a> | 
-                    <a href="partials/delete.php?post_id=<?php echo $post["id"];?>">DELETE</a> 
+                    | <a href="edit_post.php?post_id=<?= $post["id"];?>">EDIT</a> | 
+                    <a onclick="return confirm('Are you sure you want to delete?')" href="partials/delete.php?post_id=<?= $post["id"];?>">DELETE</a> 
                 <?php } ?>
             </p>   
 
-            <img src="<?php echo $post["image"];?>">
+            <img src="<?= $post["image"];?>">
 
-            <p><?php echo $post["content"];?></p> 
+            <p><?= $post["content"];?></p> 
 
             <div class=userdetails> 
-                <p><a href="mailto:<?php echo $post["email"]; ?>"><?php echo $post["firstname"]." ".$post["lastname"];?></a> | <a href="display_post.php?id=<?php echo $post["id"];?>" >COMMENTS (<?php echo $post["amount_of_comments"]; ?>)</a></p>
+                <p>
+                    <a href="mailto:<?= $post["email"]; ?>"><?= $post["firstname"]." ".$post["lastname"];?></a> | <a href="display_post.php?id=<?= $post["id"];?>" >COMMENTS (<?= $post["amount_of_comments"]; ?>)</a>
+                </p>
             </div>
 
         </article>
