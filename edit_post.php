@@ -23,7 +23,9 @@
             <h1>Edit Post</h1>
              <?php
                 $postid = $_GET["post_id"];
-                $query = "SELECT posts.id, posts.title,  posts.content, posts.category FROM posts WHERE posts.id = $postid";
+                $query = "SELECT posts.id, posts.title,  posts.content, posts.category 
+                          FROM posts 
+                          WHERE posts.id = $postid";
 
                 $statement = $pdo->prepare($query);  
                 $statement->execute();
@@ -31,13 +33,13 @@
             ?>
             <form action="partials/edit.php" method="post" enctype="multipart/form-data">
                 <div class="space">
-                    <input type="hidden" name="id" value="<?php echo $postid; ?>">
+                    <input type="hidden" name="id" value="<?= $postid; ?>">
                     
                     <label for="title">Title</label>
-                    <input type="text" name="title" id="title" value="<?php echo $posts[0]["title"]; ?>" required><br />
+                    <input type="text" name="title" id="title" value="<?= $posts[0]["title"]; ?>" required><br />
                     
                     <label for="content">Content</label>
-                    <textarea name="content" id="content" required><?php echo $posts[0]["content"]; ?></textarea><br />
+                    <textarea name="content" id="content" required><?= $posts[0]["content"]; ?></textarea><br />
                 </div>
                 
                 <b>Category Selection</b><br />
