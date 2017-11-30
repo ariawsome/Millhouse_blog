@@ -24,7 +24,7 @@
 
             <form action="partials/new_post.php" method="post" enctype="multipart/form-data">
 
-                <input type="hidden" name="userid" value="<?php echo $_SESSION[" user "]["id "]; ?>">
+                <input type="hidden" name="userid" value="<?php echo $_SESSION["user"]["id"]; ?>">
                 <div class="space">
                     <label for="title">Title</label>
                     <input type="text" name="title" id="title" required><br />

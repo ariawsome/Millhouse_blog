@@ -76,7 +76,7 @@
 
             <p><?= $post["content"];?></p> 
 
-            <div class=userdetails> 
+            <div class="userdetails"> 
                 <p>
                     <a href="mailto:<?= $post["email"]; ?>"><?= $post["firstname"]." ".$post["lastname"];?></a> | <a href="display_post.php?id=<?= $post["id"];?>" >COMMENTS (<?= $post["amount_of_comments"]; ?>)</a>
                 </p>
