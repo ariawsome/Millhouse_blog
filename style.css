@@ -211,7 +211,7 @@ input[type=text], input[type=password], input[type=email] {
 
 main{
     position: relative;
-    top:200px;
+    padding-top: 200px;
     padding-left: 2%;
 }
 
@@ -364,14 +364,20 @@ label[for=watches], label[for=sunglasses], label[for=design]{
 }
 
 /*footer*/
-.footer{
-    background-color:darkblue;
+footer{
+    background-color:dimgray;
+    display: flex;
+    height: 250px;
+    width: 100%;
+    justify-content: center;
 }
-
+.footer-content{
+   
+}
 @media screen and (min-width: 992px) {
     main{
-        top: 0px; 
-        padding-left: 20%;
+        padding-top: 0px; 
+        padding-left: 250px;
     }
 .w3-top{
     position: relative;
@@ -388,12 +394,14 @@ label[for=watches], label[for=sunglasses], label[for=design]{
     
     /*start styling posts - under categories-desktop*/
     .post, .comment_section, .user_profile, .about, .create_post, .register_user{
-        margin-left: 10%;
+        margin-left: 15%;
         width: 70%;
     }   
    .userdetails a, .userdetails p{
   font-size: 0.9em; 
 }
-
+footer{
+padding-left:  250px;        
+    }
 }    
     
