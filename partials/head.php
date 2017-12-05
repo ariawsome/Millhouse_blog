@@ -63,6 +63,11 @@
                             <h4>LOGIN</h4>
                         </div>
                         
+                         <?php
+                          if(isset($_GET["error"])){
+                          echo "<p class='alert'>" .  $_GET["error"] . "</p>";
+                         } ?>
+                         
                         <input type="text" name="email" class="form-control registrationemail" placeholder="E-mail address">
                         <input type="password" name="password" class="form-control registrationpassword" placeholder="Password">
                         <input type="submit" class="btn btn-primary" value="Login">
