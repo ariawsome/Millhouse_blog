@@ -10,16 +10,16 @@
             
             <form action="partials/register.php" method="POST" class="registerform">
                 <label for="firstname"> Firstname: </label>
-                <input type="text" name="firstname" required><br />
+                <input type="text" name="firstname" id="firstname" required><br />
                 
                 <label for="lastname"> Lastname </label>
-                <input type="text" name="lastname" required><br />
+                <input type="text" name="lastname" id="lastname" required><br />
                 
                 <label for="email"> Email: </label>
-                <input type="email" name="email" required><br />
+                <input type="email" name="email" id="email" required><br />
                 
                 <label for="password"> Password </label>
-                <input type="password" name="password" required><br />
+                <input type="password" name="password" id="password" required><br />
                 
                 <input type="submit" class="btn btn-primary">
             </form>

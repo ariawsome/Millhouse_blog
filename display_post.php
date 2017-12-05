@@ -1,20 +1,14 @@
 <?php
     session_start();
     require 'partials/database.php';
-
     require 'partials/head.php';
 ?>
 
 <main>
 <?php   
-    $query = "SELECT posts.id, posts.title, posts.date, posts.image, posts.content, posts.category, posts.user_id, users.firstname, users.lastname, users.email 
-              FROM posts 
-              INNER JOIN users ON posts.user_id = users.id 
-              WHERE posts.id = :postID";  
-    $statement = $pdo->prepare($query);  
-	$statement->execute(array(":postID" => $_GET["id"]));
-	$posts = $statement->fetchAll(PDO::FETCH_ASSOC);
+    require 'partials/fetch_one_post.php';
     
+    // Printing one blog post
     foreach($posts as $post){ ?>    
         <article class="post">
 
@@ -28,7 +22,7 @@
                 <?php } ?>
             </p>  
 
-            <img src="<?= $post["image"];?>">
+            <img src="<?= $post["image"]; ?>" alt="<?= $post["image_alt"]; ?>">
 
             <p>
                 <?= $post["content"];?>
@@ -39,11 +33,12 @@
             </p>
 
         </article>
-   <?php   }  ?>
+   <?php } // End of printing blog post?>
    
    <section class="comment_section">  
    
-   <?php 
+   <?php
+       // This will only run if the user is logged in, otherwise it will print "Please login to comment!"
        if(isset($_SESSION["user"])){ ?>
            <form action="partials/add_comment.php" method="post">
                <input type="hidden" name="userid" value="<?= $_SESSION["user"]["id"]; ?>">
@@ -69,14 +64,9 @@
            echo "Please login to comment!";
     }
        
-    $query = "SELECT comment.date, comment.content, comment.post_id, users.firstname, users.lastname, users.email 
-              FROM comment 
-              INNER JOIN users ON comment.user_id = users.id 
-              WHERE comment.post_id = :postID";  
-    $statement = $pdo->prepare($query);  
-	$statement->execute(array(":postID" => $_GET["id"]));
-	$posts = $statement->fetchAll(PDO::FETCH_ASSOC);
-       
+    require 'partials/fetch_comments.php';
+    
+    // Printing all comments to the recent blog post
     foreach($posts as $post){ ?>    
         <article class="comment-display">
            
@@ -95,7 +85,7 @@
             <hr>
             
         </article>
-   <?php   }  ?>
+   <?php } // End of printing all comments ?>
    
    </section>
 </main>

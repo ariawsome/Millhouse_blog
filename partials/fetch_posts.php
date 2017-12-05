@@ -1,14 +1,16 @@
 <?php
+// Fetching all posts that have a specific category, or if no category is chosen (index) all posts will be fetched
 if(isset($_POST['Watches'])){
-    $query = "SELECT COUNT(comment.post_id) AS amount_of_comments, posts.id, posts.title, posts.date, posts.image, posts.content, posts.category, posts.user_id, users.firstname, users.lastname, users.email 
+    $query = "SELECT COUNT(comment.post_id) AS amount_of_comments, posts.id, posts.title, posts.date, posts.image, posts.image_alt, posts.content, posts.category, posts.user_id, users.firstname, users.lastname, users.email 
               FROM posts 
               INNER JOIN users ON posts.user_id = users.id 
               LEFT JOIN comment ON posts.id = comment.post_id 
               WHERE posts.category='Watches' 
-              GROUP BY posts.id ORDER BY posts.id DESC";
+              GROUP BY posts.id 
+              ORDER BY posts.id DESC";
     }
 elseif(isset($_POST['Sunglasses'])){
-    $query = "SELECT COUNT(comment.post_id) AS amount_of_comments, posts.id, posts.title, posts.date, posts.image, posts.content, posts.category, posts.user_id, users.firstname, users.lastname, users.email 
+    $query = "SELECT COUNT(comment.post_id) AS amount_of_comments, posts.id, posts.title, posts.date, posts.image, posts.image_alt, posts.content, posts.category, posts.user_id, users.firstname, users.lastname, users.email 
               FROM posts 
               INNER JOIN users ON posts.user_id = users.id 
               LEFT JOIN comment ON posts.id = comment.post_id 
@@ -17,7 +19,7 @@ elseif(isset($_POST['Sunglasses'])){
               ORDER BY posts.id DESC";
 }    
 elseif(isset($_POST['Interior'])){
-    $query = "SELECT COUNT(comment.post_id) AS amount_of_comments, posts.id, posts.title, posts.date, posts.image, posts.content, posts.category, posts.user_id, users.firstname, users.lastname, users.email 
+    $query = "SELECT COUNT(comment.post_id) AS amount_of_comments, posts.id, posts.title, posts.date, posts.image, posts.image_alt, posts.content, posts.category, posts.user_id, users.firstname, users.lastname, users.email 
               FROM posts 
               INNER JOIN users ON posts.user_id = users.id 
               LEFT JOIN comment ON posts.id = comment.post_id 
@@ -26,7 +28,7 @@ elseif(isset($_POST['Interior'])){
               ORDER BY posts.id DESC";
 }    
 else{  
-    $query = "SELECT COUNT(comment.post_id) AS amount_of_comments, posts.id, posts.title, posts.date, posts.image, posts.content, posts.category, posts.user_id, users.firstname, users.lastname, users.email 
+    $query = "SELECT COUNT(comment.post_id) AS amount_of_comments, posts.id, posts.title, posts.date, posts.image, posts.image_alt, posts.content, posts.category, posts.user_id, users.firstname, users.lastname, users.email 
               FROM posts 
               INNER JOIN users ON posts.user_id = users.id 
               LEFT JOIN comment ON posts.id = comment.post_id 
