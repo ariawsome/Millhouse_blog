@@ -43,6 +43,7 @@ button:focus {
 
 /*knapp hamburgare*/
  .w3-button{
+    color: white!important;
     margin-top: 50px;
     padding-left:20px; 
 }
