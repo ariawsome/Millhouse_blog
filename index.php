@@ -24,7 +24,7 @@
         // Print all blog posts
         foreach($posts as $post){ ?>    
             <article class="post">
-                <h2><?= $post["title"];?></h2>
+                <h1><?= $post["title"];?></h1>
 
                 <p>
                    <?= $post["date"];?> | <?= $post["category"];

@@ -8,7 +8,7 @@ body{
 
 a{
     text-decoration: none;
-    color: #1b89c9;
+    color: #007dba!important;
     font-size: 0.9em;
 }
 
@@ -17,7 +17,7 @@ h1, h2, h3 {
 }
 
 nav a {
-    color:white;
+    color:white!important;
     font-size: 1.1em;
     font-weight: 300;
     display: inline-block;
