@@ -7,22 +7,23 @@
         <p>Villa Villekulla 20,Stockholm län</p>
         <p>happyunicorn@ninjaweb.se</p>
         <p>Ring oss: (+43)075321892</p>
-
-
     </div>
 </footer>
+
+
+<script>
+    // Script to open and close sidebar
+    function w3_open() {
+        document.getElementById("mySidebar").style.display = "block";
+        document.getElementById("myOverlay").style.display = "block";
+    }
+
+    function w3_close() {
+        document.getElementById("mySidebar").style.display = "none";
+        document.getElementById("myOverlay").style.display = "none";
+    }
+</script>
 
 </body>
 
 </html>
-
-
-<!--<li><a href=“http://www.facebook.com“>
-           <img src=“image/footer_logos/facebook.svg”>
-       </a></li>
-       <li><a href=“http://www.twitter.com”>
-           <img src=“image/footer_logos/twitter.svg” />
-       </a></li>
-       <li><a href=“http://www.instagram.com”>
-           <img src=“image/footer_logos/instagram.svg”/>
-       </a></li>-->

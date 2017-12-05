@@ -63,7 +63,8 @@
     
 <?php 
     require 'partials/footer.php';
-    } else{
-    header("Location: /prodjektarbete/index.php");
+    }
+    else{
+        header("Location: /prodjektarbete/index.php");
     }
 ?>
