@@ -8,7 +8,8 @@ $path = $_FILES["uploaded_file"]["tmp_name"];
 
 if(move_uploaded_file($path, "../uploaded_images/" . $filename)){
     $statement = $pdo->prepare("
-        INSERT INTO posts (title, user_id, image, content, category, date) VALUES (:title, :userid, :image, :content, :category, CURDATE()) 
+        INSERT INTO posts (title, user_id, image, content, category, date) 
+        VALUES (:title, :userid, :image, :content, :category, CURDATE()) 
     ");
 
     $statement->execute(array(
@@ -19,6 +20,7 @@ if(move_uploaded_file($path, "../uploaded_images/" . $filename)){
         ":category" => $_POST["category"]
     ));
     header("Location: /prodjektarbete/index.php");
-}else{
+}
+else{
     echo "fail!";
 }
