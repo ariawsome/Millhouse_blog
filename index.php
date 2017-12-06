@@ -10,17 +10,18 @@
         // Print all blog posts
         foreach($posts as $post){ ?>    
             <article class="post">
-                <h2><?= $post["title"];?></h2>
+                <h1><?= $post["title"];?></h1>
 
                 <p>
                    <?= $post["date"];?> | <?= $post["category"];
+                                 
                     if(isset($_SESSION["user"]) && $_SESSION["user"]["id"] == $post["user_id"]){ ?>
                         | <a href="edit_post.php?post_id=<?= $post["id"];?>">EDIT</a> | 
                         <a onclick="return confirm('Are you sure you want to delete?')" href="partials/delete.php?post_id=<?= $post["id"];?>">DELETE</a> 
                     <?php } ?>
                 </p>   
 
-                <img src="<?= $post["image"];?>">
+                <img src="<?= $post["image"]; ?>" alt="<?= $post["image_alt"]; ?>">
 
                 <p><?= $post["content"];?></p> 
 

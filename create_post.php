@@ -1,6 +1,6 @@
 <?php
-    session_start();
-    if(isset($_SESSION["user"]) && $_SESSION["user"]["admin"] == 1){
+session_start();
+if(isset($_SESSION["user"]) && $_SESSION["user"]["admin"] == 1){
     require 'partials/database.php';
     require 'partials/head.php';
 ?>
@@ -11,13 +11,16 @@
 
             <form action="partials/new_post.php" method="post" enctype="multipart/form-data">
 
-                <input type="hidden" name="userid" value="<?php echo $_SESSION["user"]["id"]; ?>">
+                <input type="hidden" name="userid" value="<?= $_SESSION["user"]["id"]; ?>">
                 <div class="space">
                     <label for="title">Title</label>
                     <input type="text" name="title" id="title" required><br />
 
                     <label for="image">Image</label>
                     <input type="file" name="uploaded_file" id="image" class="file_image" required><br />
+                    
+                    <label for="alt">Alternative text for image</label>
+                    <input type="text" name="alt" id="alt" required><br />
 
                     <label for="content">Add a description</label>
                     <textarea name="content" id="content" required></textarea><br />
@@ -44,8 +47,8 @@
 
 <?php 
     require 'partials/footer.php';
-    }
-    else{
-        header("Location: /prodjektarbete/index.php");
-    } 
+}
+else{
+    header("Location: /prodjektarbete/index.php");
+} 
 ?>
