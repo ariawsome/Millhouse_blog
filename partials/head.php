@@ -17,7 +17,7 @@
         <a href="index.php"><div class="logo"><img src="image/jumbotron/millhouse-logo-white.svg" alt="Millhouse logo"></div></a>
     </header>
     
-    <div class="container">
+
         <nav class="w3-sidebar w3-bar-block w3-white w3-animate-left w3-text-grey w3-collapse w3-top w3-center" id="mySidebar">
 
             <br>
@@ -37,49 +37,55 @@
             <form action="index.php" method="POST" class="menu_button">
                 <button type="submit" name="Watches" class="btn btn-default">Watches</button>
 
-                <button type="submit" name="Sunglasses" class="btn btn-default">Sunglasses</button>
 
-                <button type="submit" name="Interior" class="btn btn-default">Interior</button>
-            </form>
-            
-            <div class="menubar">
-                <form action="partials/login.php" method="POST" class="menu_send">
-                <?php 
-                    if(isset($_SESSION["user"])){ ?>
-                        <div class="linkprofile">
-                            <h3><?= $_SESSION["user"]["firstname"] . " " . $_SESSION["user"]["lastname"] ?></h3>
-                            <a href="user_profile.php">My profile</a><br>
-                            <?php 
-                                if(isset($_SESSION["user"]) && $_SESSION["user"]["admin"] == 1){ ?>
-                                    <a href="create_post.php">Create post</a><br>
-                            <?php } ?>
-                            <a href="partials/logout.php">Logout</a>
-                        </div>
-                <?php 
-                    }
-                    else{ ?>
-                        <div class="categories">
-                            <h3>LOGIN</h3>
-                        </div>
-                        
-                        <?php
-                        if(isset($_GET["error"])){ ?>
-                            <p class="alert"><?= $_GET["error"] ?></p>
+        <div class="categories">
+            <h3>CATEGORIES</h3>
+        </div>
+
+        <form action="index.php" method="POST" class="menu_button">
+            <button type="submit" name="Watches" class="btn btn-default">Watches</button>
+
+            <button type="submit" name="Sunglasses" class="btn btn-default">Sunglasses</button>
+
+            <button type="submit" name="Interior" class="btn btn-default">Interior</button>
+        </form>
+
+        <div class="menubar">
+            <form action="partials/login.php" method="POST" class="menu_send">
+            <?php 
+                if(isset($_SESSION["user"])){ ?>
+                    <div class="linkprofile">
+                        <h3><?= $_SESSION["user"]["firstname"] . " " . $_SESSION["user"]["lastname"] ?></h3>
+                        <a href="user_profile.php">My profile</a><br>
+                        <?php 
+                            if(isset($_SESSION["user"]) && $_SESSION["user"]["admin"] == 1){ ?>
+                                <a href="create_post.php">Create post</a><br>
                         <?php } ?>
-                        
-                        <label for="email" hidden>Email</label>
-                        <input type="text" name="email" class="form-control registrationemail" id="email" placeholder="E-mail address">
-                        
-                        <label for="password" hidden>Password</label>
-                        <input type="password" name="password" class="form-control registrationpassword" id="password" placeholder="Password">
-                        <input type="submit" class="btn btn-primary" value="Login">
-                        
-                        <div class="register">
-                            <a href="register_user.php">Register</a>
-                        </div>
-                <?php } ?>
-                </form>
-            </div>
-        </nav>
-    </div>
-  
+                        <a href="partials/logout.php">Logout</a>
+                    </div>
+            <?php 
+                }
+                else{ ?>
+                    <div class="categories">
+                        <h3>LOGIN</h3>
+                    </div>
+
+                    <?php
+                    if(isset($_GET["error"])){ ?>
+                        <p class="alert"><?= $_GET["error"] ?></p>
+                    <?php } ?>
+
+                    <label for="email" hidden>Email</label>
+                    <input type="text" name="email" class="form-control registrationemail" id="email" placeholder="E-mail address">
+
+                    <label for="password" hidden>Password</label>
+                    <input type="password" name="password" class="form-control registrationpassword" id="password" placeholder="Password">
+                    <input type="submit" class="btn btn-primary" value="Login">
+
+                    <div class="register">
+                        <a href="register_user.php">Register</a>
+                    </div>
+            <?php } ?>
+            </form>
+        </div>
+    </nav>
