@@ -45,7 +45,7 @@ button:focus {
     clear: both;
 }
 
-/*knapp hamburgare*/
+/*button hamburgare*/
  .w3-button{
     color: white!important;
     margin-top: 50px;
@@ -83,7 +83,7 @@ button:focus {
     right:0px;
 }
 
-/* jumbotronen*/
+/* jumbotron*/
 .w3-blue{
     background-image: url(image/jumbotron/forest1.jpeg);
     background-repeat: no-repeat;

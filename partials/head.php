@@ -29,14 +29,6 @@
                 <a href="index.php"><i class="fa fa-home"></i>Home</a>
                 <a href="about.php"><i class="fa fa-users"></i>About</a>  
             </div>
-     
-            <div class="categories">
-                <h3>CATEGORIES</h3>
-            </div>
-            
-            <form action="index.php" method="POST" class="menu_button">
-                <button type="submit" name="Watches" class="btn btn-default">Watches</button>
-
 
         <div class="categories">
             <h3>CATEGORIES</h3>
@@ -53,6 +45,7 @@
         <div class="menubar">
             <form action="partials/login.php" method="POST" class="menu_send">
             <?php 
+                //Run if you are logged in
                 if(isset($_SESSION["user"])){ ?>
                     <div class="linkprofile">
                         <h3><?= $_SESSION["user"]["firstname"] . " " . $_SESSION["user"]["lastname"] ?></h3>
@@ -65,6 +58,7 @@
                     </div>
             <?php 
                 }
+                //Run if you are logged out
                 else{ ?>
                     <div class="categories">
                         <h3>LOGIN</h3>
