@@ -13,6 +13,7 @@ $statement->execute(array(
 
 $fetched_user = $statement->fetch(PDO::FETCH_ASSOC);
 
+// Checking if password is the same as the password in the database
 if( password_verify($password, $fetched_user["password"]) ){
 
   $_SESSION["user"] = $fetched_user;

@@ -3,27 +3,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Millhouse blog</title>
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     <link href="https://fonts.googleapis.com/css?family=Josefin+Sans|Roboto:300,400,500,700" rel="stylesheet">
-    <link type="text/css" href="style.css" rel="stylesheet">
-    <link type="text/php" href="footer.php" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro" rel="stylesheet">
+    <link type="text/css" href="style.css" rel="stylesheet">
 </head>
 
 <body>
     <header class="w3-container w3-top w3-blue w3-medium">
         <a href="javascript:void(0)" class="w3-left w3-button w3-transparent w3-xxxlarge" onclick="w3_open()">☰</a>
         
-        <a href="index.php"><div class="logo"><img src="image/jumbotron/millhouse-logo-white.svg" alt="logo"></div></a>
+        <a href="index.php"><div class="logo"><img src="image/jumbotron/millhouse-logo-white.svg" alt="Millhouse logo"></div></a>
     </header>
     
     <div class="container">
         <nav class="w3-sidebar w3-bar-block w3-white w3-animate-left w3-text-grey w3-collapse w3-top w3-center" id="mySidebar">
+
             <br>
             <div class="logosidebar">
-                <img src="image/jumbotron/millhouse-logo-white.svg">
+                <img src="image/jumbotron/millhouse-logo-white.svg" alt="Millhouse logo">
                 <a href="javascript:void(0)" class="w3-left w3-button w3-transparent w3-large" onclick="w3_close()"> <i class= "fa fa-times"></i></a>
             </div>   
             <div class="home-about">
@@ -60,16 +59,19 @@
                     }
                     else{ ?>
                         <div class="categories">
-                            <h4>LOGIN</h4>
+                            <h3>LOGIN</h3>
                         </div>
                         
-                         <?php
-                          if(isset($_GET["error"])){
-                          echo "<p class='alert'>" .  $_GET["error"] . "</p>";
-                         } ?>
-                         
-                        <input type="text" name="email" class="form-control registrationemail" placeholder="E-mail address">
-                        <input type="password" name="password" class="form-control registrationpassword" placeholder="Password">
+                        <?php
+                        if(isset($_GET["error"])){ ?>
+                            <p class="alert"><?= $_GET["error"] ?></p>
+                        <?php } ?>
+                        
+                        <label for="email" hidden>Email</label>
+                        <input type="text" name="email" class="form-control registrationemail" id="email" placeholder="E-mail address">
+                        
+                        <label for="password" hidden>Password</label>
+                        <input type="password" name="password" class="form-control registrationpassword" id="password" placeholder="Password">
                         <input type="submit" class="btn btn-primary" value="Login">
                         
                         <div class="register">

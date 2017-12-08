@@ -1,24 +1,15 @@
 <?php
-    session_start();
-    if(isset($_SESSION["user"]) && $_SESSION["user"]["admin"] == 1){
+session_start();
+if(isset($_SESSION["user"]) && $_SESSION["user"]["admin"] == 1){
     require 'partials/database.php';
-
     require 'partials/head.php';
+    require 'partials/fetch_post_for_edit.php';
 ?>
 
     <main>
         <div class="create_post">
             <h1>Edit Post</h1>
-             <?php
-                $postid = $_GET["post_id"];
-                $query = "SELECT posts.id, posts.title,  posts.content, posts.category 
-                          FROM posts 
-                          WHERE posts.id = $postid";
-
-                $statement = $pdo->prepare($query);  
-                $statement->execute();
-                $posts = $statement->fetchAll(PDO::FETCH_ASSOC);
-            ?>
+             
             <form action="partials/edit.php" method="post" enctype="multipart/form-data">
                 <div class="space">
                     <input type="hidden" name="id" value="<?= $postid; ?>">
@@ -51,8 +42,8 @@
     
 <?php 
     require 'partials/footer.php';
-    }
-    else{
-        header("Location: /prodjektarbete/index.php");
-    }
+}
+else{
+    header("Location: /prodjektarbete/index.php");
+}
 ?>

@@ -8,7 +8,7 @@ body{
 
 a{
     text-decoration: none;
-    color: #1b89c9;
+    color: #007dba!important;
     font-size: 0.9em;
 }
 
@@ -17,7 +17,7 @@ h1, h2, h3 {
 }
 
 nav a {
-    color:white;
+    color:white!important;
     font-size: 1.1em;
     font-weight: 300;
     display: inline-block;
@@ -33,6 +33,10 @@ header{
     position: relative;
 }
 
+.w3-top{
+    position: absolute;
+}
+
 button:focus {
     outline:0;
 }
@@ -43,6 +47,7 @@ button:focus {
 
 /*knapp hamburgare*/
  .w3-button{
+    color: white!important;
     margin-top: 50px;
     padding-left:20px; 
 }
@@ -125,10 +130,6 @@ h3{
     margin-top: 30px;
 }
 
-h4{
-    font-size: 1em; 
-}
-
 .registrationemail, .registrationpassword{
     margin-bottom: 10px;
     padding-left: 10px;
@@ -163,13 +164,6 @@ input[type=text], input[type=password], input[type=email]{
     justify-content: flex-start;
     margin-left: 15px;
     background: #ffffff;
-    background-image: -webkit-linear-gradient(top, #ffffff, #ffffff);
-    background-image: -moz-linear-gradient(top, #ffffff, #ffffff);
-    background-image: -ms-linear-gradient(top, #ffffff, #ffffff);
-    background-image: -o-linear-gradient(top, #ffffff, #ffffff);
-    background-image: linear-gradient(to bottom, #ffffff, #ffffff);
-    -webkit-border-radius: 8px;
-    -moz-border-radius: 8px;
     border-radius: 8px;
     color: #000000;
     font-size: 1em;
@@ -272,16 +266,7 @@ textarea{
     display: inline-block;
     margin-top: 20px;
     background: #ffffff;
-    background-image: -webkit-linear-gradient(top, #ffffff, #ffffff);
-    background-image: -moz-linear-gradient(top, #ffffff, #ffffff);
-    background-image: -ms-linear-gradient(top, #ffffff, #ffffff);
-    background-image: -o-linear-gradient(top, #ffffff, #ffffff);
-    background-image: linear-gradient(to bottom, #ffffff, #ffffff);
-    -webkit-border-radius: 8px;
-    -moz-border-radius: 8px;
     border-radius: 8px;
-    -webkit-box-shadow: 0px 1px 3px #666666;
-    -moz-box-shadow: 0px 1px 3px #666666;
     box-shadow: 0px 1px 3px #666666;
     color: #000000;
     font-size: 1em;
@@ -333,16 +318,7 @@ label[for=watches], label[for=sunglasses], label[for=design]{
     display: flex;
     justify-content: flex-start;
     background: #ffffff;
-    background-image: -webkit-linear-gradient(top, #ffffff, #ffffff);
-    background-image: -moz-linear-gradient(top, #ffffff, #ffffff);
-    background-image: -ms-linear-gradient(top, #ffffff, #ffffff);
-    background-image: -o-linear-gradient(top, #ffffff, #ffffff);
-    background-image: linear-gradient(to bottom, #ffffff, #ffffff);
-    -webkit-border-radius: 8px;
-    -moz-border-radius: 8px;
     border-radius: 8px;
-    -webkit-box-shadow: 0px 1px 3px #666666;
-    -moz-box-shadow: 0px 1px 3px #666666;
     box-shadow: 0px 1px 3px #666666;
     color: #000000;
     font-size: 1em;
