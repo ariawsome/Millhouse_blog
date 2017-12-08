@@ -33,6 +33,10 @@ header{
     position: relative;
 }
 
+.w3-top{
+    position: absolute;
+}
+
 button:focus {
     outline:0;
 }
