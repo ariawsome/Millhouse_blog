@@ -96,6 +96,8 @@ button:focus {
     color:#fff!important;
     background-color:#113a55!important;
     z-index: 3;
+    width:250px;
+    font-weight:bold" 
 }
 
 .home-about{

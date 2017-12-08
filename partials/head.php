@@ -17,16 +17,26 @@
         <a href="index.php"><div class="logo"><img src="image/jumbotron/millhouse-logo-white.svg" alt="Millhouse logo"></div></a>
     </header>
     
-    <nav class="w3-sidebar w3-bar-block w3-white w3-animate-left w3-text-grey w3-collapse w3-top w3-center" style="width:250px;font-weight:bold" id="mySidebar" role="menu">
-        <br>
-        <div class="logosidebar">
-            <img src="image/jumbotron/millhouse-logo-white.svg" alt="Millhouse logo">
-            <a href="javascript:void(0)" class="w3-left w3-button w3-transparent w3-large" onclick="w3_close()"> <i class= "fa fa-times"></i></a>
-        </div>   
-        <div class="home-about">
-            <a href="index.php"><i class="fa fa-home"></i>Home</a>
-            <a href="about.php"><i class="fa fa-users"></i>About</a>  
-        </div>
+
+        <nav class="w3-sidebar w3-bar-block w3-white w3-animate-left w3-text-grey w3-collapse w3-top w3-center" id="mySidebar">
+
+            <br>
+            <div class="logosidebar">
+                <img src="image/jumbotron/millhouse-logo-white.svg" alt="Millhouse logo">
+                <a href="javascript:void(0)" class="w3-left w3-button w3-transparent w3-large" onclick="w3_close()"> <i class= "fa fa-times"></i></a>
+            </div>   
+            <div class="home-about">
+                <a href="index.php"><i class="fa fa-home"></i>Home</a>
+                <a href="about.php"><i class="fa fa-users"></i>About</a>  
+            </div>
+     
+            <div class="categories">
+                <h3>CATEGORIES</h3>
+            </div>
+            
+            <form action="index.php" method="POST" class="menu_button">
+                <button type="submit" name="Watches" class="btn btn-default">Watches</button>
+
 
         <div class="categories">
             <h3>CATEGORIES</h3>
